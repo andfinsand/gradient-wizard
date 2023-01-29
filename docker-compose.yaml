@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      # context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/gradient-wizard-docker
+    env_file:
+      - ./.env
+    restart: always
+    ports:
+      - 8000:8000
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - 3000:3000
+    command: npm run dev

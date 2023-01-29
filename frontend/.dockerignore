@@ -1,0 +1,12 @@
+# Exclude development dependencies
+node_modules
+npm-debug.log
+
+# Exclude production dependencies
+package-lock.json
+
+# Exclude build artifacts
+build
+
+# Exclude config files
+.env
