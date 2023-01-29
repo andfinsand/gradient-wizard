@@ -6,7 +6,7 @@ import json
 import openai
 
 class IndexView(View):
-    def get(request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         return render(request, 'frontend/index.html')
 
 class InputView(View):
