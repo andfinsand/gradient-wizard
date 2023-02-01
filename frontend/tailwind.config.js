@@ -14,9 +14,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      django: '#092e20',
-      react: '#61DBFB',
-      tailwind: '#00b4b6'
+      white: '#F8F8F8',
+      glassDark: 'rgba(51, 51, 51, 0.75)'
     }
   },
   variants: {
