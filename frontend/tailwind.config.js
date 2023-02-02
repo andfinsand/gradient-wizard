@@ -15,7 +15,8 @@ module.exports = {
   theme: {
     colors: {
       white: '#F8F8F8',
-      glassDark: 'rgba(51, 51, 51, 0.75)'
+      glassLight: 'rgba(255, 255, 255, 0.5)',
+      glassDark: 'rgba(51, 51, 51, 0.75)',
     }
   },
   variants: {

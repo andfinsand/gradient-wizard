@@ -1,19 +1,18 @@
 import React, { useState } from "react";
+import InputData from "./InputData";
 
 const InputDiv = () => {
-    const [data, setData] = useState([]);
-    const [word, setWord] = useState("");
-    const [inputHistory, setInputHistory] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-
     return (
-        <div className="flex">
-            <label className="self-center">
-                <input className="border rounded-sm" type="text" />
-            </label>
-            <button type="submit" value="submit" className="border border-[#5312EB] rounded-full px-3 py-2 mx-2">
-                Generate
-            </button>
+        <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-between self-center bg-glassLight border-2 border-glassLight rounded-lg shadow-[0_35px_12px_-28px_rgb(0,0,0,0.3)] w-[1248px] h-44 p-5">
+                <div className="self-center text-2xl my-5">
+                    Enter a word and create gradients with ai!
+                </div>
+                <InputData />
+            </div>
+            <div className="text-center text-2xl text-white mt-10">
+                "Infinite Possibilities"
+            </div>
         </div>
     );
 }

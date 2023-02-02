@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { createRoot } from "react-dom/client";
-// import { render } from "react-dom";
 
 import Navbar from "./Navbar";
 import InputDiv from "./InputDiv";
@@ -13,7 +12,7 @@ const gradient = `linear-gradient(to right, ${data.hex1}, ${data.hex2})`;
 class Main extends Component {
     render() {
         return (
-            <div className="flex flex-col justify-between h-full">
+            <div className="flex flex-col justify-between h-full px-10 py-10 pb-5">
                 <InputDiv />
                 <Arrows />
                 <Footer />
