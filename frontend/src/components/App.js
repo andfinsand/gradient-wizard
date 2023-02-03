@@ -12,7 +12,7 @@ const gradient = `linear-gradient(to right, ${data.hex1}, ${data.hex2})`;
 class Main extends Component {
     render() {
         return (
-            <div className="flex flex-col justify-between h-full px-10 py-10 pb-5">
+            <div className="flex flex-col justify-between font-Lato h-full px-10 py-10 pb-1">
                 <InputDiv />
                 <Arrows />
                 <Footer />
