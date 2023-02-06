@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { createRoot } from "react-dom/client";
 
 import Navbar from "./Navbar";
@@ -6,14 +6,17 @@ import InputDiv from "./InputDiv";
 import Arrows from "./Arrows";
 import Footer from "./Footer";
 
-const data = {hex1: "#00A2E8", hex2: "#003580" };
-const gradient = `linear-gradient(to right, ${data.hex1}, ${data.hex2})`;
+// const hex_data = {hex1: "#00A2E8", hex2: "#003580" };
+// const gradient = `linear-gradient(to right, ${hex_data.hex1}, ${hex_data.hex2})`;
 
 class Main extends Component {
     render() {
+        const { data, handleData } = this.props;
+        // const { handleData } = this.props;
+        // console.log({data})
         return (
             <div className="flex flex-col justify-between font-Lato h-full px-10 py-10 pb-1">
-                <InputDiv />
+                <InputDiv handleData={handleData} />
                 <Arrows />
                 <Footer />
             </div>
@@ -24,12 +27,25 @@ class Main extends Component {
 export default class App extends Component {
     constructor (props) {
         super(props);
+        this.state = {
+            data: {}
+        }
     }
+
+    handleData = (data) => {
+        this.setState({
+            data
+        });
+    }
+
     render() {
+        const { data } = this.state;
+        const gradient = `linear-gradient(to right, ${data.hex1}, ${data.hex2})`;
+
         return (
-            <div style={{ background: gradient , width: '100vw', height: '100vh' }} className="flex flex-col">
+            <div style={{ background: gradient , width: '100vw', height: '100vh'  }} className="flex flex-col">
                 <Navbar />
-                <Main />
+                <Main handleData={this.handleData} />
             </div>
         );
     }

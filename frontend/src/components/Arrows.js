@@ -7,12 +7,12 @@ const Arrows = () => {
     return (
         <div className="flex justify-between w-full text-white mb-5">
             <button>
-                <div className="bg-glassLightest px-4 py-8">
+                <div className="bg-glassLight px-4 py-8">
                     <img src={Chevron_Left} alt="Chevron_Left" className="text-white"/>
                 </div>
             </button>
             <button>
-                <div className="bg-glassLightest px-4 py-8">
+                <div className="bg-glassLight px-4 py-8">
                     <img src={Chevron_Right} alt="Chevron_Left" className="text-white"/>
                 </div>
             </button>

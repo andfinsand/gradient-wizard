@@ -550,9 +550,6 @@ video {
 .justify-between {
   justify-content: space-between;
 }
-.justify-around {
-  justify-content: space-around;
-}
 .self-center {
   align-self: center;
 }
@@ -569,13 +566,10 @@ video {
   border-width: 2px;
 }
 .border-glassLight {
-  border-color: rgba(255, 255, 255, 0.4);
-}
-.bg-glassLightest {
-  background-color: rgba(155, 181, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 .bg-glassLight {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .bg-glassDark {
   background-color: rgba(51, 51, 51, 0.75);
@@ -684,9 +678,6 @@ video {
 }
 .drop-shadow-custom-button {
   --tw-drop-shadow: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.3));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
