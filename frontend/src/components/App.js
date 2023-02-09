@@ -6,8 +6,8 @@ import InputDiv from "./InputDiv";
 import Arrows from "./Arrows";
 import Footer from "./Footer";
 
-// const hex_data = {hex1: "#00A2E8", hex2: "#003580" };
-// const gradient = `linear-gradient(to right, ${hex_data.hex1}, ${hex_data.hex2})`;
+const hex_data = {hex1: "#003049", hex2: "#00B2D6" };
+const gradient = `linear-gradient(to right, ${hex_data.hex1}, ${hex_data.hex2})`;
 
 class Main extends Component {
     render() {
@@ -18,7 +18,7 @@ class Main extends Component {
             <div className="flex flex-col justify-between font-Lato h-full px-10 py-10 pb-1">
                 <InputDiv handleData={handleData} />
                 <Arrows />
-                <Footer />
+                <Footer data={data} />
             </div>
         )
     }
@@ -39,8 +39,8 @@ export default class App extends Component {
     }
 
     render() {
-        const { data } = this.state;
-        const gradient = `linear-gradient(to right, ${data.hex1}, ${data.hex2})`;
+        // const { data } = this.state;
+        // const gradient = `linear-gradient(to right, ${data.hex1}, ${data.hex2})`;
 
         return (
             <div style={{ background: gradient , width: '100vw', height: '100vh'  }} className="flex flex-col">
