@@ -46,7 +46,7 @@ const InputData = ({handleData}) => {
                 {/* Input box and information button */}
                 <div className="flex flex-row">
                     <label className="self-center drop-shadow-custom-input">
-                        <input value={word} onChange={handleChange} placeholder="" type="text"  className="focus:outline-0 bg-glassMedium rounded-md w-52 h-9 pl-2" />
+                        <input value={word} onChange={handleChange} placeholder="" type="text"  className="focus:outline-0 bg-glassMedium rounded-md w-56 h-9 pl-2" />
                     </label>
                     <button type="submit" value="submit" className="self-center rounded-full w-4 h-4 ml-1">
                         <img src={Information_Icon} alt="Information_Icon"/>
@@ -54,7 +54,7 @@ const InputData = ({handleData}) => {
                 </div>
 
                 {/* Generate button */}
-                <button type="submit" value="submit" style={{ background: "linear-gradient(to right bottom, #7583A3, #3F4C6B)" }} className="rounded-full drop-shadow-custom-button mx-6 p-0.5">
+                <button type="submit" value="submit" style={{ background: "linear-gradient(to right bottom, #7583A3, #3F4C6B)" }} className="rounded-full drop-shadow-custom-button mx-8 p-0.5">
                     <div className="btn-gradient btn-gradient-transition self-center rounded-full text-white px-5 py-2">
                         Generate
                     </div>

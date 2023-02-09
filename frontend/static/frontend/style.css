@@ -478,6 +478,10 @@ video {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -526,6 +530,9 @@ video {
 .h-16 {
   height: 4rem;
 }
+.h-8 {
+  height: 2rem;
+}
 .w-full {
   width: 100%;
 }
@@ -541,6 +548,9 @@ video {
 .w-730 {
   width: 730px;
 }
+.w-56 {
+  width: 14rem;
+}
 .flex-row {
   flex-direction: row;
 }
@@ -552,6 +562,9 @@ video {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
 }
 .self-center {
   align-self: center;
