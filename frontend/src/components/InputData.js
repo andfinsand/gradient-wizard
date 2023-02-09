@@ -28,9 +28,9 @@ const InputData = ({handleData}) => {
                 credentials: 'same-origin',
             });
 
-            const data = await response.json();
-            setData(data)
-            handleData(data);
+            const fetchedData = await response.json();
+            setData(fetchedData)
+            handleData(fetchedData);
 
         } catch(error){
             console.error('Error:', error);
