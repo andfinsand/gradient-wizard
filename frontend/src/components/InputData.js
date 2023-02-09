@@ -41,15 +41,17 @@ const InputData = ({handleData}) => {
         <div className="flex justify-center w-full">
 
             {/* Input box */}
-            <form onSubmit={handleSubmit} className="self-center ">
+            <form onSubmit={handleSubmit} className="flex flex-row">
 
                 {/* Input box and information button */}
-                <label className="drop-shadow-custom-input">
-                    <input value={word} onChange={handleChange} placeholder="Infinite" type="text"  className="focus:outline-0 rounded-md w-52 h-8 pl-2" />
-                </label>
-                <button type="submit" value="submit" className="self-center rounded-full w-4 h-4 ml-1">
-                    <img src={Information_Icon} alt="Information_Icon" className=""/>
-                </button>
+                <div className="flex flex-row">
+                    <label className="self-center drop-shadow-custom-input">
+                        <input value={word} onChange={handleChange} placeholder="Infinite" type="text"  className="focus:outline-0 rounded-md w-52 h-9 pl-2" />
+                    </label>
+                    <button type="submit" value="submit" className="self-center rounded-full w-4 h-4 ml-1">
+                        <img src={Information_Icon} alt="Information_Icon"/>
+                    </button>
+                </div>
 
                 {/* Generate button */}
                 <button type="submit" value="submit" style={{ background: "linear-gradient(to right bottom, #7583A3, #3F4C6B)" }} className="rounded-full drop-shadow-custom-button mx-6 p-0.5">
