@@ -19,7 +19,7 @@ module.exports = {
       grayLight: '#606C88',
       grayDark: '#3F4C6B',
       glassMedium: 'rgba(255, 255, 255, 0.5)',
-      glassLight: 'rgba(255, 255, 255, 0.3)',
+      glassLight: 'rgba(255, 255, 255, 0.4)',
       glassLightest: 'rgba(255, 255, 255, 0.1)',
       glassDark: 'rgba(51, 51, 51, 0.75)',
     },

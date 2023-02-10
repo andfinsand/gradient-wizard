@@ -3,7 +3,7 @@ import InputData from "./InputData";
 import HexDiv from "./HexDiv";
 
 const InputDiv = ({handleData}) => {
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
 
         return (
             <div className="flex flex-col justify-center">

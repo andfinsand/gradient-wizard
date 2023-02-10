@@ -5,7 +5,7 @@ import Three_Gradients from "../../static/svg/Three_Gradients_Icon.svg";
 
 const InputData = ({handleData}) => {
     const [word, setWord] = useState("");
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
     const handleChange = (event) => {
         setWord(event.target.value);
     }
