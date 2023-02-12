@@ -490,6 +490,9 @@ video {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mr-3 {
+  margin-right: 0.75rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -508,6 +511,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-3 {
+  height: 0.75rem;
+}
 .h-9 {
   height: 2.25rem;
 }
@@ -517,17 +523,20 @@ video {
 .h-5 {
   height: 1.25rem;
 }
-.h-3 {
-  height: 0.75rem;
-}
 .h-40 {
   height: 10rem;
 }
-.h-16 {
-  height: 4rem;
+.h-60 {
+  height: 60px;
 }
 .w-full {
   width: 100%;
+}
+.w-40 {
+  width: 10rem;
+}
+.w-3 {
+  width: 0.75rem;
 }
 .w-56 {
   width: 14rem;
@@ -535,11 +544,11 @@ video {
 .w-4 {
   width: 1rem;
 }
-.w-3 {
-  width: 0.75rem;
-}
 .w-730 {
   width: 730px;
+}
+.w-60 {
+  width: 55px;
 }
 .flex-row {
   flex-direction: row;
@@ -569,16 +578,13 @@ video {
   border-width: 2px;
 }
 .border-glassLight {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 .bg-glassLight {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .bg-glassMedium {
   background-color: rgba(255, 255, 255, 0.5);
-}
-.bg-glassLightest {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 .bg-glassDark {
   background-color: rgba(51, 51, 51, 0.75);
@@ -608,10 +614,6 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -624,11 +626,21 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
 .pl-2 {
   padding-left: 0.5rem;
+}
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .text-center {
   text-align: center;
@@ -654,6 +666,10 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .font-semibold {
   font-weight: 600;
 }
@@ -676,17 +692,22 @@ video {
   --tw-shadow-colored: 0 17px 8px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-custom-input {
+  --tw-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  --tw-shadow-colored: 0 4px 5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-custom-main {
   --tw-shadow: 0 35px 12px -28px rgb(0,0,0,0.3);
   --tw-shadow-colored: 0 35px 12px -28px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.drop-shadow-custom-input {
-  --tw-drop-shadow: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.3));
+.drop-shadow-custom-button {
+  --tw-drop-shadow: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.3));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.drop-shadow-custom-button {
-  --tw-drop-shadow: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.3));
+.drop-shadow-custom-title {
+  --tw-drop-shadow: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.3));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 

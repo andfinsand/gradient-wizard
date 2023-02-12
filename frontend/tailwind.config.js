@@ -19,14 +19,13 @@ module.exports = {
       grayLight: '#606C88',
       grayDark: '#3F4C6B',
       glassMedium: 'rgba(255, 255, 255, 0.5)',
-      glassLight: 'rgba(255, 255, 255, 0.3)',
+      glassLight: 'rgba(255, 255, 255, 0.4)',
       glassLightest: 'rgba(255, 255, 255, 0.1)',
       glassDark: 'rgba(51, 51, 51, 0.75)',
     },
     borderRadius: {
       'md': '6px',
       'lg': '15px',
-      // '4xl': '30px',
       'full': '9999px',
     },
     extend: {
@@ -38,13 +37,18 @@ module.exports = {
       boxShadow: {
         'custom-main': '0 35px 12px -28px rgb(0,0,0,0.3)',
         'custom-hex': '0 17px 8px -12px rgb(0,0,0,0.3)',
+        'custom-input': '0 4px 5px rgba(0, 0, 0, 0.2)',
       },
       dropShadow: {
-        'custom-input': '0 3px 2px rgba(0, 0, 0, 0.3)',
-        'custom-button': '0 3px 2px rgba(0, 0, 0, 0.3)',
+        'custom-button': '0 3px 3px rgba(0, 0, 0, 0.3)',
+        'custom-title': '1px 1px 0px rgba(0, 0, 0, 0.3)',
       },
       width: {
         '730': '730px',
+        '60': '55px',
+      },
+      height: {
+        '60': '60px',
       },
     },
   },
