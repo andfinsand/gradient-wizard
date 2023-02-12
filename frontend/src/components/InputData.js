@@ -5,7 +5,7 @@ import Three_Gradients from "../../static/svg/Three_Gradients_Icon.svg";
 
 const InputData = ({handleData}) => {
     const [word, setWord] = useState("");
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
     const handleChange = (event) => {
         setWord(event.target.value);
     }
@@ -28,9 +28,9 @@ const InputData = ({handleData}) => {
                 credentials: 'same-origin',
             });
 
-            const data = await response.json();
-            setData(data)
-            handleData(data);
+            const fetchedData = await response.json();
+            setData(fetchedData)
+            handleData(fetchedData);
 
         } catch(error){
             console.error('Error:', error);
@@ -45,7 +45,7 @@ const InputData = ({handleData}) => {
 
                 {/* Input box and information button */}
                 <div className="flex flex-row">
-                    <label className="self-center drop-shadow-custom-input">
+                    <label className="self-center shadow-custom-input rounded-md">
                         <input value={word} onChange={handleChange} placeholder="" type="text"  className="focus:outline-0 bg-glassMedium rounded-md w-56 h-9 pl-2" />
                     </label>
                     <button type="submit" value="submit" className="self-center rounded-full w-4 h-4 ml-1">

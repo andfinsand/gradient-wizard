@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 
-const HexDiv = () => {
+const HexDiv = ({data}) => {
+
+    const copyToClipboard = (e) => {
+        const code = e.currentTarget.querySelector(".hex-code").textContent;
+        navigator.clipboard.writeText(code);
+      }
 
     return (
         <div className="flex justify-center text-black mt-2">
-            <div className="bg-glassLight border-2 border-glassLight rounded-full shadow-custom-hex font-semibold m-5 px-12 py-3">#003049</div>
-            <div className="bg-glassLight border-2 border-glassLight rounded-full shadow-custom-hex font-semibold m-5 px-12 py-3">#00B2D6</div>
+            <button onClick={copyToClipboard} className="flex justify-center bg-glassLight border-2 border-glassLight rounded-full shadow-custom-hex font-semibold w-40 m-5 py-3">
+                <div style={{ backgroundColor: data.hex1 || "#003049" }} className="self-center w-3 h-3 mr-3"></div>
+                <span className="hex-code">{data.hex1 || "#003049"}</span>
+            </button>
+            <button onClick={copyToClipboard} className="flex justify-center bg-glassLight border-2 border-glassLight rounded-full shadow-custom-hex font-semibold w-40 m-5 py-3">
+                <div style={{ backgroundColor: data.hex2 || "#00B2D6" }} className="self-center w-3 h-3 mr-3"></div>
+                <span className="hex-code">{data.hex2 || "#00B2D6"}</span>
+            </button>
         </div>
     );
 }

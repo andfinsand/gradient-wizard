@@ -11,12 +11,12 @@ const InputDiv = ({handleData}) => {
                     <div className="self-center font-Sansita text-2xl tracking-wide mt-3">
                         Enter a word or phrase and create gradients with ai!
                     </div>
-                    <InputData handleData={(data) => {
-                        setData(data);
-                        handleData(data);
+                    <InputData handleData={(fetchedData) => {
+                        setData(fetchedData);
+                        handleData(fetchedData);
                     }} />
                 </div>
-                <HexDiv />
+                <HexDiv data={data} />
             </div>
         );
 }
