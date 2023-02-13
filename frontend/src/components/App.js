@@ -24,7 +24,7 @@ export default function App() {
             <Navbar />
             <div className="flex flex-col justify-between font-Lato h-full px-10 py-10 pb-1">
                 <InputDiv handleData={handleData} />
-                <Arrows />
+                <Arrows data={data} />
                 <Footer data={data} />
         </div>
         </div>

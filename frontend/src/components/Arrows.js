@@ -18,6 +18,6 @@ const Arrows = () => {
             </button>
         </div>
     );
-}
+};
 
 export default Arrows;
