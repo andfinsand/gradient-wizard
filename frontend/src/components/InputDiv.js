@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import InputData from "./InputData";
 import HexDiv from "./HexDiv";
 
-const InputDiv = ({handleData}) => {
-    const [data, setData] = useState({})
+const InputDiv = ({handleData, currentData}) => {
 
         return (
             <div className="flex flex-col justify-center">
@@ -12,11 +11,10 @@ const InputDiv = ({handleData}) => {
                         Enter a word or phrase and create gradients with ai!
                     </div>
                     <InputData handleData={(fetchedData) => {
-                        setData(fetchedData);
                         handleData(fetchedData);
                     }} />
                 </div>
-                <HexDiv data={data} />
+                <HexDiv currentData={currentData} />
             </div>
         );
 }
