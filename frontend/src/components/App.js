@@ -66,7 +66,12 @@ export default function App() {
             <Navbar />
             <div className="flex flex-col justify-between font-Lato h-full px-10 py-10 pb-1">
                 <InputDiv handleData={handleData} currentData={currentData} />
-                <Arrows handlePrevious={handlePrevious} handleNext={handleNext} />
+                <Arrows
+                    handlePrevious={handlePrevious}
+                    handleNext={handleNext}
+                    currentDataIndex={currentDataIndex}
+                    history={history}
+                />
                 <Footer currentData={currentData} />
             </div>
         </div>
