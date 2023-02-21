@@ -64,7 +64,7 @@ export default function App() {
     return (
         <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
             <Navbar />
-            <div className="flex flex-col justify-between font-Lato h-full px-10 py-10 pb-1">
+            <div className="flex flex-col justify-between font-Lato text-black h-full px-10 py-10 pb-1">
                 <InputDiv handleData={handleData} currentData={currentData} />
                 <Arrows
                     handlePrevious={handlePrevious}

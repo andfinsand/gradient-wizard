@@ -46,7 +46,7 @@ const InputData = ({handleData}) => {
                 {/* Input box and information button */}
                 <div className="flex flex-row">
                     <label className="self-center shadow-custom-input rounded-md">
-                        <input value={word} onChange={handleChange} type="text"  className="focus:outline-0 bg-glassMedium rounded-md w-56 h-9 pl-2" />
+                        <input value={word} onChange={handleChange} type="text" maxLength={200} className="focus:outline-0 bg-glassMedium rounded-md w-56 h-9 px-2" />
                     </label>
                     <button type="submit" value="submit" className="self-center rounded-full w-4 h-4 ml-1">
                         <img src={Information_Icon} alt="Information_Icon"/>

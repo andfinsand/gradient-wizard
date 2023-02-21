@@ -21,7 +21,6 @@
 /* hexcode copied alert */
 
 
-
 /* previous and next button error alert */
 
 @keyframes fade-in {
@@ -41,6 +40,7 @@
         opacity: 0;
     }
 }
+
 
 .fade-in {
     animation: fade-in 0.5s ease-in-out forwards;

@@ -4,7 +4,7 @@ import Logo from "../../static/images/logo.png";
 const Navbar = () => {
 
     return (
-        <div className="flex bg-glassLight shadow-custom-nav text-blackTitle h-60 px-2 py-2">
+        <div className="flex bg-glassLight shadow-custom-nav text-black h-60 px-2 py-2">
             <div className="w-60 opacity-90">
                 <img src={Logo} alt="Gradient_Wizard_Logo"/>
             </div>

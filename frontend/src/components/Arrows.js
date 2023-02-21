@@ -18,7 +18,7 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history}) => {
             setPrevFadeIn(true);
             setTimeout(() => {
                 setPrevFadeOut(true);
-            }, 2000); // remove message after 3 seconds
+            }, 2000); // remove message after 2 seconds
         } else {
             handlePrevious();
         }
@@ -30,7 +30,7 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history}) => {
             setNextFadeIn(true);
             setTimeout(() => {
                 setNextFadeOut(true);
-            }, 2000); // remove message after 3 seconds
+            }, 2000); // remove message after 2 seconds
         } else {
             handleNext();
         }
