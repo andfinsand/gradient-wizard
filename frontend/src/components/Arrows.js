@@ -47,7 +47,7 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history}) => {
                 </button>
                 {prevMessage && (
                 <div
-                    className={`flex justify-center items-center bg-glassLight text-black text-sm italic absolute rounded-md w-34 h-9 top-0 transform -translate-y-16 -translate-x-9 ${prevFadeIn ? "fade-in" : ""} ${prevFadeOut ? "fade-out" : ""}`}
+                    className={`flex justify-center items-center absolute bg-glassLight text-black text-sm italic rounded-md w-34 h-9 top-0 -translate-y-16 -translate-x-9 ${prevFadeIn ? "fade-in" : ""} ${prevFadeOut ? "fade-out" : ""}`}
                     onAnimationEnd={() => {
                         if (prevFadeOut) {
                             setPrevMessage("");
@@ -68,7 +68,7 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history}) => {
                 </button>
                 {nextMessage && (
                 <div
-                    className={`flex justify-center items-center bg-glassLight text-black text-sm italic absolute rounded-md w-38 h-9 top-0 right-0 transform -translate-y-16 translate-x-10 ${nextFadeIn ? "fade-in" : ""} ${nextFadeOut ? "fade-out" : ""}`}
+                    className={`flex justify-center items-center absolute bg-glassLight text-black text-sm italic rounded-md w-38 h-9 top-0 right-0 -translate-y-16 translate-x-10 ${nextFadeIn ? "fade-in" : ""} ${nextFadeOut ? "fade-out" : ""}`}
                     onAnimationEnd={() => {
                         if (nextFadeOut) {
                             setNextMessage("");
