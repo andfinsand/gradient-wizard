@@ -26,7 +26,7 @@ const HexDiv = ({currentData}) => {
             <button onClick={copyToClipboard} data-index={0} className="flex justify-center bg-glassLight hover:bg-glassLightest border-2 border-glassLight rounded-full shadow-custom-hex font-semibold w-40 m-5 py-3 hover:transition ease-in-out duration-300">
                 {copiedMessage[0] ? (
                     <div className="flex items-center">
-                        <span className="flex items-center text-black text-md italic fade-in-hex">{copiedMessage[0]}</span>
+                        <span className="flex items-center text-black text-md italic tracking-wider">{copiedMessage[0]}</span>
                     </div>
                 ) : (
                     <div className="flex items-center">
@@ -40,7 +40,7 @@ const HexDiv = ({currentData}) => {
             <button onClick={copyToClipboard} data-index={1} className="flex justify-center bg-glassLight hover:bg-glassLightest border-2 border-glassLight rounded-full shadow-custom-hex font-semibold w-40 m-5 py-3 hover:transition ease-in-out duration-300">
                 {copiedMessage[1] ? (
                     <div className="flex items-center">
-                        <span className="flex items-center text-black text-md italic fade-in-hex">{copiedMessage[1]}</span>
+                        <span className="flex items-center text-black text-md italic tracking-wider">{copiedMessage[1]}</span>
                     </div>
                 ) : (
                     <div className="flex items-center">
