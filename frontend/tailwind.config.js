@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     colors: {
       white: '#F8F8F8',
-      black: '#272727',
+      black: '#323232',
       grayLight: '#606C88',
       grayDark: '#3F4C6B',
       glassMedium: 'rgba(255, 255, 255, 0.5)',
@@ -35,17 +35,20 @@ module.exports = {
         'Sansita': ['Sansita', 'sans-serif'],
       },
       boxShadow: {
+        'custom-nav': '0 0px 7px rgb(0,0,0,0.2)',
         'custom-main': '0 35px 12px -28px rgb(0,0,0,0.3)',
         'custom-hex': '0 17px 8px -12px rgb(0,0,0,0.3)',
         'custom-input': '0 4px 5px rgba(0, 0, 0, 0.2)',
       },
       dropShadow: {
         'custom-button': '0 3px 3px rgba(0, 0, 0, 0.3)',
-        'custom-title': '1px 1px 0px rgba(0, 0, 0, 0.3)',
+        // 'custom-title': '1px 1px 0px rgba(200, 200, 200, 0.3)',
       },
       width: {
         '730': '730px',
         '60': '55px',
+        '38': '155px',
+        '34': '135px',
       },
       height: {
         '60': '60px',

@@ -49,6 +49,8 @@ class InputView(View):
 						line[i] = element.replace("Name: ", "")
 					elif "Description: " in element:
 						line[i] = element.replace("Description: ", "")
+					elif "description: " in element:
+						line[i] = element.replace("description: ", "")
 
 				# Create dictionary
 				gradient_dict = {

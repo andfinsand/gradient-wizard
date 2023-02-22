@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import OpenAI_Logo from "../../static/svg/OpenAI_Logo.svg";
 
-const Footer = ({data}) => {
+const Footer = ({currentData}) => {
     return (
         <div className="flex flex-col text-lg text-white">
-
             {/* Gradient name */}
             <div className="text-center text-2xl text-white">
-                {data.name || "Ocean Depths"}
+                {currentData.name || "Fresh Start"}
             </div>
-
-            <div className="text-center mt-5 mb-16 italic">{data.description || "The two colors represent the deep, dark depths of the ocean and the bright, vibrant surface."}</div>
+            {/* Gradient description */}
+            <div className="text-center mt-5 mb-16 italic">{currentData.description || "The light and airy colors of the gradient represent a fresh start and a new beginning."}</div>
+            {/* OpenAI logo */}
             <div className="self-center">
                 <img src={OpenAI_Logo} alt="OpenAI logo" />
             </div>
