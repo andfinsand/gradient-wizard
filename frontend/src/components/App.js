@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 
 import Navbar from "./Navbar";
-import InputDiv from "./InputDiv";
-import Arrows from "./Arrows";
+import MainDiv from "./MainDiv";
+import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 // const hex_data = {hex1: "#003049", hex2: "#00B2D6" };
@@ -66,8 +66,8 @@ export default function App() {
         <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
             <Navbar />
             <div className="flex flex-col justify-between font-Lato text-black h-full px-10 py-10 pb-1">
-                <InputDiv handleData={handleData} currentData={currentData} isLoading={isLoading} setIsLoading={setIsLoading} />
-                <Arrows
+                <MainDiv handleData={handleData} currentData={currentData} isLoading={isLoading} setIsLoading={setIsLoading} />
+                <Navigation
                     handlePrevious={handlePrevious}
                     handleNext={handleNext}
                     currentDataIndex={currentDataIndex}

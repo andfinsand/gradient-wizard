@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Chevron_Left from "../../static/svg/Chevron_Left_Icon.svg";
 import Chevron_Right from "../../static/svg/Chevron_Right_Icon.svg";
 
-const Arrows = ({handlePrevious, handleNext, currentDataIndex, history, isLoading}) => {
+const Navigation = ({handlePrevious, handleNext, currentDataIndex, history, isLoading}) => {
     const [prevMessage, setPrevMessage] = useState("");
     const [nextMessage, setNextMessage] = useState("");
     const [prevFadeIn, setPrevFadeIn] = useState(false);
@@ -93,4 +93,4 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history, isLoadin
     );
 };
 
-export default Arrows;
+export default Navigation;
