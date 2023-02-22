@@ -18,7 +18,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
         setIsLoading(true);
 
-        // Send the data to the Django backend using the REST framework using fetch
+        // Fetch request to Django and use OpenAI API
         try{
             const response = await fetch('input-word', {
                 method: 'POST',
@@ -42,8 +42,6 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
     return (
         <div className="flex justify-center w-full">
-
-            {/* Form*/}
             <form onSubmit={handleSubmit} className="flex flex-row">
 
                 {/* Input box and information button */}

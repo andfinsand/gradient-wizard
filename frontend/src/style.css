@@ -18,9 +18,6 @@
     background-image: linear-gradient(to right, #3F4C6B 0%, #7583A3  51%, #3F4C6B  100%);
 }
 
-/* hexcode copied alert */
-
-
 /* previous and next button error alert */
 
 @keyframes fade-in {
@@ -40,7 +37,6 @@
         opacity: 0;
     }
 }
-
 
 .fade-in {
     animation: fade-in 0.5s ease-in-out forwards;
