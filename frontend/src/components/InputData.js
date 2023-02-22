@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Information_Icon from "../../static/svg/Information_Icon.svg";
 import Two_Gradients from "../../static/svg/Two_Gradients_Icon.svg";
 import Three_Gradients from "../../static/svg/Three_Gradients_Icon.svg";
 
-const InputData = ({handleData}) => {
+const InputData = ({handleData, isLoading, setIsLoading}) => {
     const [word, setWord] = useState("");
-    const [data, setData] = useState({})
+
     const handleChange = (event) => {
         setWord(event.target.value);
     }
@@ -15,6 +15,8 @@ const InputData = ({handleData}) => {
         const csrf_token = document.cookie.match(/csrftoken=([^;]+)/)[1];
 
         event.preventDefault();
+
+        setIsLoading(true);
 
         // Send the data to the Django backend using the REST framework using fetch
         try{
@@ -29,18 +31,19 @@ const InputData = ({handleData}) => {
             });
 
             const fetchedData = await response.json();
-            setData(fetchedData)
             handleData(fetchedData);
 
         } catch(error){
             console.error('Error:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
     return (
         <div className="flex justify-center w-full">
 
-            {/* Input box */}
+            {/* Form*/}
             <form onSubmit={handleSubmit} className="flex flex-row">
 
                 {/* Input box and information button */}

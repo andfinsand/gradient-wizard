@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Chevron_Left from "../../static/svg/Chevron_Left_Icon.svg";
 import Chevron_Right from "../../static/svg/Chevron_Right_Icon.svg";
 
-const Arrows = ({handlePrevious, handleNext, currentDataIndex, history}) => {
+const Arrows = ({handlePrevious, handleNext, currentDataIndex, history, isLoading}) => {
     const [prevMessage, setPrevMessage] = useState("");
     const [nextMessage, setNextMessage] = useState("");
     const [prevFadeIn, setPrevFadeIn] = useState(false);
@@ -38,6 +38,7 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history}) => {
 
     return (
         <div className="flex justify-between w-full text-white mb-5">
+
             {/* Go back button */}
             <div className="relative mx-3">
                 <button onClick={handlePrevClick}>
@@ -59,6 +60,14 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history}) => {
                 </div>
                 )}
             </div>
+
+            {/* Loading spinner */}
+            {isLoading ? (
+                    <div className="flex self-center text-white text-3xl">Loading data...</div>
+                ) : (
+                    <div></div>
+                )}
+
             {/* Go forward button */}
             <div className="relative mx-3">
                 <button onClick={handleNextClick}>

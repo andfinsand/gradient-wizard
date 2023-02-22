@@ -2,7 +2,7 @@ import React from "react";
 import InputData from "./InputData";
 import HexDiv from "./HexDiv";
 
-const InputDiv = ({handleData, currentData}) => {
+const InputDiv = ({handleData, currentData, isLoading, setIsLoading}) => {
 
         return (
             <div className="flex flex-col justify-center">
@@ -12,7 +12,10 @@ const InputDiv = ({handleData, currentData}) => {
                     </div>
                     <InputData handleData={(fetchedData) => {
                         handleData(fetchedData);
-                    }} />
+                        }}
+                        isLoading={isLoading}
+                        setIsLoading={setIsLoading}
+                    />
                 </div>
                 <HexDiv currentData={currentData} />
             </div>

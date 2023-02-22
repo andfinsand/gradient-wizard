@@ -11,9 +11,20 @@ import Footer from "./Footer";
 const initialGradient = 'linear-gradient(to right, #EAECC6, #00B2D6)';
 
 export default function App() {
+    const [isLoading, setIsLoading] = useState(false);
     const [history, setHistory] = useState([]);
     const [currentDataIndex, setCurrentDataIndex] = useState(-1);
     const [gradient, setGradient] = useState(initialGradient);
+    const currentData = currentDataIndex >= 0 ? history[currentDataIndex] : {};
+
+    // Get data from InputData component, add data to history array, update background gradient with data.
+    const handleData = (fetchedData) => {
+        setHistory([...history, fetchedData]);
+        setCurrentDataIndex(currentDataIndex + 1);
+        setGradient(
+        `linear-gradient(to right, ${fetchedData.hex1}, ${fetchedData.hex2})`
+        );
+    };
 
     // Indexing for generated gradients
     useEffect(() => {
@@ -27,14 +38,6 @@ export default function App() {
             setGradient(initialGradient);
         }
     }, [history]);
-
-    const handleData = (fetchedData) => {
-        setHistory([...history, fetchedData]);
-        setCurrentDataIndex(currentDataIndex + 1);
-        setGradient(
-        `linear-gradient(to right, ${fetchedData.hex1}, ${fetchedData.hex2})`
-        );
-    };
 
     // Go back
     const handlePrevious = () => {
@@ -59,18 +62,17 @@ export default function App() {
         }
     };
 
-    const currentData = currentDataIndex >= 0 ? history[currentDataIndex] : {};
-
     return (
         <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
             <Navbar />
             <div className="flex flex-col justify-between font-Lato text-black h-full px-10 py-10 pb-1">
-                <InputDiv handleData={handleData} currentData={currentData} />
+                <InputDiv handleData={handleData} currentData={currentData} isLoading={isLoading} setIsLoading={setIsLoading} />
                 <Arrows
                     handlePrevious={handlePrevious}
                     handleNext={handleNext}
                     currentDataIndex={currentDataIndex}
                     history={history}
+                    isLoading={isLoading}
                 />
                 <Footer currentData={currentData} />
             </div>
