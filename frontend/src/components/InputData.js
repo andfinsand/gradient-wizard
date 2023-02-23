@@ -49,9 +49,10 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                     <label className="self-center shadow-custom-input rounded-md">
                         <input value={word} onChange={handleChange} type="text" maxLength={200} className="focus:outline-0 bg-glassMedium rounded-md w-56 h-9 px-2" />
                     </label>
-                    <button type="submit" value="submit" className="self-center rounded-full w-4 h-4 ml-1">
+                    <div className="self-center help-tip">
+                        <p>Generate gradients from your input, complete with a unique name, explanation of color choices, and corresponding hex codes provided by OpenAI.</p>
                         <img src={Information_Icon} alt="Information_Icon"/>
-                    </button>
+                    </div>
                 </div>
 
                 {/* Generate button */}

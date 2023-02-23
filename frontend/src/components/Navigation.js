@@ -63,7 +63,14 @@ const Navigation = ({handlePrevious, handleNext, currentDataIndex, history, isLo
 
             {/* Loading spinner */}
             {isLoading ? (
-                    <div className="flex self-center text-white text-3xl">Loading data...</div>
+                    <div className="flex self-center loader">
+                        <div className="face">
+                            <div className="circle"></div>
+                        </div>
+                        <div className="face">
+                            <div className="circle"></div>
+                        </div>
+                    </div>
                 ) : (
                     <div></div>
                 )}
