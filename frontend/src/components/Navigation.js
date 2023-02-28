@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Chevron_Left from "../../static/svg/Chevron_Left_Icon.svg";
 import Chevron_Right from "../../static/svg/Chevron_Right_Icon.svg";
 
-const Arrows = ({handlePrevious, handleNext, currentDataIndex, history, isLoading}) => {
+const Navigation = ({handlePrevious, handleNext, currentDataIndex, history, isLoading}) => {
     const [prevMessage, setPrevMessage] = useState("");
     const [nextMessage, setNextMessage] = useState("");
     const [prevFadeIn, setPrevFadeIn] = useState(false);
@@ -41,7 +41,7 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history, isLoadin
 
             {/* Go back button */}
             <div className="relative mx-3">
-                <button onClick={handlePrevClick}>
+                <button onClick={handlePrevClick} className="transform hover:scale-110 ease-in-out duration-300">
                     <div className="bg-glassLight px-4 py-8">
                         <img src={Chevron_Left} alt="Chevron_Left" className="text-white"/>
                     </div>
@@ -63,14 +63,21 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history, isLoadin
 
             {/* Loading spinner */}
             {isLoading ? (
-                    <div className="flex self-center text-white text-3xl">Loading data...</div>
+                    <div className="flex self-center loader">
+                        <div className="face">
+                            <div className="circle"></div>
+                        </div>
+                        <div className="face">
+                            <div className="circle"></div>
+                        </div>
+                    </div>
                 ) : (
                     <div></div>
                 )}
 
             {/* Go forward button */}
             <div className="relative mx-3">
-                <button onClick={handleNextClick}>
+                <button onClick={handleNextClick} className="transform hover:scale-110 ease-in-out duration-300">
                     <div className="bg-glassLight px-4 py-8">
                         <img src={Chevron_Right} alt="Chevron_Left" className="text-white"/>
                     </div>
@@ -93,4 +100,4 @@ const Arrows = ({handlePrevious, handleNext, currentDataIndex, history, isLoadin
     );
 };
 
-export default Arrows;
+export default Navigation;
