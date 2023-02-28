@@ -42,6 +42,7 @@ module.exports = {
       },
       dropShadow: {
         'custom-button': '0 3px 3px rgba(0, 0, 0, 0.3)',
+        'custom-button-press': '0 2px 2px rgba(0, 0, 0, 0.3)',
         // 'custom-title': '1px 1px 0px rgba(200, 200, 200, 0.3)',
       },
       width: {
