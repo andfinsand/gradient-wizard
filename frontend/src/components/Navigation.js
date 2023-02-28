@@ -41,7 +41,7 @@ const Navigation = ({handlePrevious, handleNext, currentDataIndex, history, isLo
 
             {/* Go back button */}
             <div className="relative mx-3">
-                <button onClick={handlePrevClick}>
+                <button onClick={handlePrevClick} className="transform hover:scale-110 ease-in-out duration-300">
                     <div className="bg-glassLight px-4 py-8">
                         <img src={Chevron_Left} alt="Chevron_Left" className="text-white"/>
                     </div>
@@ -77,7 +77,7 @@ const Navigation = ({handlePrevious, handleNext, currentDataIndex, history, isLo
 
             {/* Go forward button */}
             <div className="relative mx-3">
-                <button onClick={handleNextClick}>
+                <button onClick={handleNextClick} className="transform hover:scale-110 ease-in-out duration-300">
                     <div className="bg-glassLight px-4 py-8">
                         <img src={Chevron_Right} alt="Chevron_Left" className="text-white"/>
                     </div>

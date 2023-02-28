@@ -50,13 +50,13 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                         <input value={word} onChange={handleChange} type="text" maxLength={200} className="focus:outline-0 bg-glassMedium rounded-md w-56 h-9 px-2" />
                     </label>
                     <div className="self-center help-tip">
-                        <p>Generate gradients from your input, complete with a unique name, explanation of color choices, and corresponding hex codes provided by OpenAI.</p>
+                        <p>Generate gradients from your input, complete with corresponding hex codes, a unique name, and explanation of color choices provided by OpenAI.</p>
                         <img src={Information_Icon} alt="Information_Icon"/>
                     </div>
                 </div>
 
                 {/* Generate button */}
-                <button type="submit" value="submit" style={{ background: "linear-gradient(to right bottom, #7583A3, #3F4C6B)" }} className="rounded-full drop-shadow-custom-button mx-8 p-0.5">
+                <button type="submit" value="submit" style={{ background: "linear-gradient(to right bottom, #7583A3, #3F4C6B)" }} className="rounded-full drop-shadow-custom-button transform active:scale-95 transition-all duration-100 ease-in-out active:drop-shadow-md mx-8 p-0.5">
                     <div className="btn-gradient btn-gradient-transition self-center rounded-full text-white px-5 py-2">
                         Generate
                     </div>

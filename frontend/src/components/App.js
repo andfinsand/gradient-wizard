@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 // const hex_data = {hex1: "#003049", hex2: "#00B2D6" };
 // const gradient = `linear-gradient(to right, ${hex_data.hex1}, ${hex_data.hex2})`;
-const initialGradient = 'linear-gradient(to right, #FFF9E1, #A8A8D8)';
+const initialGradient = 'linear-gradient(to right, #EDD0C5, #6774AC)';
 
 export default function App() {
     const [isLoading, setIsLoading] = useState(false);

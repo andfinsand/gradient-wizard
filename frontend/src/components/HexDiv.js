@@ -30,8 +30,8 @@ const HexDiv = ({currentData}) => {
                     </div>
                 ) : (
                     <div className="flex items-center">
-                        <div style={{ backgroundColor: currentData.hex1 || "#FFF9E1" }} className="self-center w-3 h-3 mr-3"></div>
-                        <span className="hex-code">{currentData.hex1 || "#FFF9E1"}</span>
+                        <div style={{ backgroundColor: currentData.hex1 || "#EDD0C5" }} className="self-center w-3 h-3 mr-3"></div>
+                        <span className="hex-code">{currentData.hex1 || "#EDD0C5"}</span>
                     </div>
                 )}
             </button>
@@ -44,8 +44,8 @@ const HexDiv = ({currentData}) => {
                     </div>
                 ) : (
                     <div className="flex items-center">
-                        <div style={{ backgroundColor: currentData.hex2 || "#A8A8D8" }} className="self-center w-3 h-3 mr-3"></div>
-                        <span className="hex-code">{currentData.hex2 || "#A8A8D8"}</span>
+                        <div style={{ backgroundColor: currentData.hex2 || "#6774AC" }} className="self-center w-3 h-3 mr-3"></div>
+                        <span className="hex-code">{currentData.hex2 || "#6774AC"}</span>
                     </div>
                 )}
             </button>
