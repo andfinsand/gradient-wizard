@@ -20,16 +20,19 @@ class InputView(View):
 		if request.method == 'POST':
 			json_data = json.loads(request.body)
 			input_val = json_data.get('word')
+			# prompt="Create a two-tone gradient using the word {}. Provide each hex code on a separate line. Provide a name for the gradient on a separate line and do not include the key 'name: '. Provide a description for why the name was chosen on a separate line and do not include the key 'description: '.".format(input_val),
+			prompt="Create a gradient with two colors using the word {}. Do NOT use the word 'sunset', 'sunrise' or 'sun' in your response. Provide each hex code on a separate line. Provide a name for the gradient on a separate line and do not include the key 'name: '. Provide a description for why the name was chosen on a separate line and do not include the key 'description: '.".format(input_val),
+			# prompt="Using the word {}, create a gradient with two colors. Provide each hex code on a separate line. Provide a unique name on a new line. Provide a description for why the colors were chosen on a new line".format(input_val),
 
 			# Openai API
 			def run_openai_api(input_val):
 				response = openai.Completion.create(
 					model="text-davinci-003",
-					prompt="Create a two-tone gradient using the word {}. Provide each hex code on a separate line. Provide a name for the gradient on a separate line and do not include the key 'name: '. Provide a description for why the name was chosen on a separate line and do not include the key 'description: '.".format(input_val),
+					prompt=prompt,
 					temperature=0,
 					max_tokens=64,
 					top_p=1.0,
-					frequency_penalty=0.0,
+					frequency_penalty=0.5,
 					presence_penalty=0.0,
 					stop=[";"]
 					)

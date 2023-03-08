@@ -768,6 +768,7 @@ video {
 /* Button gradient and animation */
 
 .btn-gradient {
+    position: relative;
     transition: 0.5s;
     background-size: 200% auto;
     width: 100%;
@@ -779,6 +780,81 @@ video {
 
 .btn-gradient-transition {
     background-image: linear-gradient(to right, #3F4C6B 0%, #7583A3  51%, #3F4C6B  100%);
+}
+
+.btn-gradient:before,
+.btn-gradient:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.btn-gradient:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #6774AC 20%, transparent 30%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #6774AC 15%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.btn-gradient:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #6774AC 15%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%),
+    radial-gradient(circle, #6774AC 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.btn-gradient.animate:before{
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.btn-gradient.animate:after{
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+    0%{
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0%{
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
 }
 
 /* Information icon */
@@ -1095,28 +1171,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.active\:scale-100:active {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .active\:drop-shadow-custom-button-press:active {
   --tw-drop-shadow: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.active\:transition-all:active {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.active\:duration-100:active {
-  transition-duration: 100ms;
-}
-
-.active\:ease-in-out:active {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
