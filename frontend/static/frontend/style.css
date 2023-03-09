@@ -566,6 +566,12 @@ video {
 .w-38 {
   width: 155px;
 }
+.w-3\/4 {
+  width: 75%;
+}
+.w-3\/5 {
+  width: 60%;
+}
 .-translate-y-16 {
   --tw-translate-y: -4rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));

@@ -11,7 +11,9 @@ const Footer = ({currentData}) => {
             </div>
 
             {/* Gradient description */}
-            <div className="text-center mt-5 mb-16 italic">{currentData.description || "The light and airy colors of the gradient represent a fresh start and a new beginning."}</div>
+            <div className="flex justify-center">
+                <div className="text-center w-3/5 mt-5 mb-16 italic">{currentData.description || "The light and airy colors of the gradient represent a fresh start and a new beginning."}</div>
+            </div>
 
             {/* Created by */}
             <div className="text-center text-xs tracking-wide">
