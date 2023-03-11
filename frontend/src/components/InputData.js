@@ -56,13 +56,13 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
                 {/* Input box and information button */}
                 <div className="flex flex-row">
-                    <label className="self-center shadow-custom-input rounded-md">
+                    <label className="self-center rounded-md">
                         <input
                             value={word}
                             onChange={handleChange}
                             type="text" maxLength={200}
                             required minLength="1"
-                            className="focus:outline-0 bg-glassMedium rounded-md w-56 h-9 px-2"
+                            className="focus:outline-0 bg-glassLight rounded-md w-56 h-9 px-2 shadow-custom-input-inner"
                         />
                     </label>
                     <div className="self-center help-tip">

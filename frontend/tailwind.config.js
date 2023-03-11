@@ -38,7 +38,7 @@ module.exports = {
         'custom-nav': '0 0px 7px rgb(0,0,0,0.2)',
         'custom-main': '0 35px 12px -28px rgb(0,0,0,0.3)',
         'custom-hex': '0 17px 8px -12px rgb(0,0,0,0.3)',
-        'custom-input': '0 4px 5px rgba(0, 0, 0, 0.2)',
+        'custom-input-inner': 'inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.6)',
       },
       dropShadow: {
         'custom-button': '0 3px 3px rgba(0, 0, 0, 0.3)',

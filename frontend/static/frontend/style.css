@@ -542,6 +542,9 @@ video {
 .h-60 {
   height: 60px;
 }
+.w-3\/5 {
+  width: 60%;
+}
 .w-40 {
   width: 10rem;
 }
@@ -565,12 +568,6 @@ video {
 }
 .w-38 {
   width: 155px;
-}
-.w-3\/4 {
-  width: 75%;
-}
-.w-3\/5 {
-  width: 60%;
 }
 .-translate-y-16 {
   --tw-translate-y: -4rem;
@@ -619,9 +616,6 @@ video {
 }
 .bg-glassLight {
   background-color: rgba(255, 255, 255, 0.4);
-}
-.bg-glassMedium {
-  background-color: rgba(255, 255, 255, 0.5);
 }
 .p-0\.5 {
   padding: 0.125rem;
@@ -737,9 +731,9 @@ video {
   --tw-shadow-colored: 0 17px 8px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-custom-input {
-  --tw-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  --tw-shadow-colored: 0 4px 5px var(--tw-shadow-color);
+.shadow-custom-input-inner {
+  --tw-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.6);
+  --tw-shadow-colored: inset 2px 4px 7px var(--tw-shadow-color), inset -3px -4px 7px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-main {
