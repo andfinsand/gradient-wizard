@@ -11,12 +11,18 @@
     width: 100%;
 }
 
+/* Button hover effect transitions color from right to left */
+
 .btn-gradient:hover {
     background-position: right center;
 }
 
-.btn-gradient-transition {
+/* .btn-gradient-transition {
     background-image: linear-gradient(to right, #3F4C6B 0%, #7583A3  51%, #3F4C6B  100%);
+} */
+
+.btn-gradient-transition {
+    background-color: rgba(248, 248, 248, 0.5);;
 }
 
 .btn-gradient:before,
@@ -35,28 +41,28 @@
 .btn-gradient:before {
     display: none;
     top: -75%;
-    background-image: radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, #6774AC 20%, transparent 30%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #6774AC 15%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%);
+    background-image: radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #F8F8F8 20%, transparent 30%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #F8F8F8 15%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%);
     background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
 }
 
 .btn-gradient:after {
     display: none;
     bottom: -75%;
-    background-image: radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #6774AC 15%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%),
-    radial-gradient(circle, #6774AC 20%, transparent 20%);
+    background-image: radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #F8F8F8 15%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%),
+    radial-gradient(circle, #F8F8F8 20%, transparent 20%);
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
 }
 
