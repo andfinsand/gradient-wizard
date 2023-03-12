@@ -6,20 +6,11 @@
 
 .btn-gradient {
     position: relative;
-    transition: 0.5s;
     background-size: 200% auto;
     width: 100%;
 }
 
 /* Button hover effect transitions color from right to left */
-
-.btn-gradient:hover {
-    background-position: right center;
-}
-
-/* .btn-gradient-transition {
-    background-image: linear-gradient(to right, #3F4C6B 0%, #7583A3  51%, #3F4C6B  100%);
-} */
 
 .btn-gradient-transition {
     background-color: rgba(248, 248, 248, 0.5);
