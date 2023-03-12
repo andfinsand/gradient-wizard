@@ -539,9 +539,6 @@ video {
 .h-60 {
   height: 60px;
 }
-.h-9 {
-  height: 2.25rem;
-}
 .w-3\/5 {
   width: 60%;
 }
@@ -563,18 +560,15 @@ video {
 .w-60 {
   width: 55px;
 }
-.w-34 {
-  width: 135px;
-}
-.w-38 {
-  width: 155px;
+.w-30 {
+  width: 120px;
 }
 .-translate-y-16 {
   --tw-translate-y: -4rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.-translate-x-9 {
-  --tw-translate-x: -2.25rem;
+.-translate-x-10 {
+  --tw-translate-x: -2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .translate-x-10 {
@@ -645,9 +639,13 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -672,31 +670,21 @@ video {
 }
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-xxs {
+  font-size: 10px;
 }
 .text-xs {
   font-size: 0.75rem;
-  line-height: 1rem;
 }
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 .text-3xl {
   font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 .text-4xl {
   font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 .font-semibold {
   font-weight: 600;
@@ -1139,6 +1127,11 @@ video {
 
 .hover\:bg-glassMedium:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(50 50 50 / var(--tw-text-opacity));
 }
 
 .hover\:transition:hover {

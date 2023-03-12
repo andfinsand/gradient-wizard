@@ -22,6 +22,18 @@ module.exports = {
       glassLight: 'rgba(255, 255, 255, 0.3)',
       glassLightest: 'rgba(255, 255, 255, 0.1)',
     },
+    fontSize: {
+      xxs: '10px',
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+    },
     borderRadius: {
       'md': '6px',
       'lg': '15px',
@@ -52,6 +64,7 @@ module.exports = {
         '60': '55px',
         '38': '155px',
         '34': '135px',
+        '30': '120px',
       },
       height: {
         '60': '60px',
