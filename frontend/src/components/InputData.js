@@ -76,7 +76,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                     onMouseDown={animateButton}
                     type="submit"
                     value="submit"
-                    className="btn-cover-layer rounded-full shadow-custom-button transform active:scale-95 transition-all duration-100 ease-in-out active:shadow-custom-button-press mx-8"
+                    className="rounded-full shadow-custom-button transform active:scale-95 transition-all duration-100 ease-in-out active:shadow-custom-button-press mx-8"
                 >
                     <div className="btn-gradient btn-gradient-transition self-center rounded-full text-black text-sm px-7 py-2.5">
                         Generate
