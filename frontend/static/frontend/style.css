@@ -515,9 +515,6 @@ video {
 .mr-1 {
   margin-right: 0.25rem;
 }
-.mt-3 {
-  margin-top: 0.75rem;
-}
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -530,17 +527,20 @@ video {
 .h-3 {
   height: 0.75rem;
 }
-.h-9 {
-  height: 2.25rem;
+.h-8 {
+  height: 2rem;
 }
 .h-5 {
   height: 1.25rem;
 }
-.h-40 {
-  height: 10rem;
+.h-32 {
+  height: 8rem;
 }
 .h-60 {
   height: 60px;
+}
+.h-9 {
+  height: 2.25rem;
 }
 .w-3\/5 {
   width: 60%;
@@ -554,11 +554,11 @@ video {
 .w-full {
   width: 100%;
 }
-.w-56 {
-  width: 14rem;
+.w-48 {
+  width: 12rem;
 }
-.w-730 {
-  width: 730px;
+.w-560 {
+  width: 560px;
 }
 .w-60 {
   width: 55px;
@@ -612,10 +612,10 @@ video {
   border-width: 2px;
 }
 .border-glassLight {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 .bg-glassLight {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .p-5 {
   padding: 1.25rem;
@@ -636,9 +636,9 @@ video {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .py-2\.5 {
   padding-top: 0.625rem;
@@ -689,9 +689,9 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -700,6 +700,10 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .font-semibold {
   font-weight: 600;
@@ -725,7 +729,7 @@ video {
   opacity: 0.9;
 }
 .shadow-custom-hex {
-  --tw-shadow: 0 17px 8px -12px rgb(0,0,0,0.3);
+  --tw-shadow: 0 17px 8px -12px rgb(0,0,0,0.2);
   --tw-shadow-colored: 0 17px 8px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -735,13 +739,13 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-button {
-  --tw-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 2px rgba(0, 0, 0, 0.2), inset 2px 2px 3px rgba(255, 255, 255, 0.35);
-  --tw-shadow-colored: 3px 3px 5px var(--tw-shadow-color), inset -2px -2px 2px var(--tw-shadow-color), inset 2px 2px 3px var(--tw-shadow-color);
+  --tw-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 3px rgba(255, 255, 255, 0.35);
+  --tw-shadow-colored: 3px 3px 5px var(--tw-shadow-color), inset -2px -2px 3px var(--tw-shadow-color), inset 2px 2px 3px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-main {
-  --tw-shadow: 0 35px 12px -28px rgb(0,0,0,0.3);
-  --tw-shadow-colored: 0 35px 12px -28px var(--tw-shadow-color);
+  --tw-shadow: 0 35px 12px -28px rgb(0,0,0,0.2), inset 0 -1px 3px rgb(0,0,0,0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.2);
+  --tw-shadow-colored: 0 35px 12px -28px var(--tw-shadow-color), inset 0 -1px 3px var(--tw-shadow-color), inset 0px 25px 10px -20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-nav {
@@ -764,18 +768,17 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Button gradient and animation */
+/* Button gradient and bubble animation */
 
 .btn-gradient {
     position: relative;
     background-size: 200% auto;
+    transition: 0.1s;
     width: 100%;
 }
 
-/* Button hover effect transitions color from right to left */
-
 .btn-gradient-transition {
-    background-color: rgba(248, 248, 248, 0.5);
+    background-color: rgba(248, 248, 248, 0.4);
 }
 
 .btn-gradient:before,

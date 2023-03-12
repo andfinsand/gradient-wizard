@@ -52,7 +52,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
     return (
         <div className="flex justify-center w-full">
-            <form onSubmit={handleSubmit} className="flex flex-row">
+            <form onSubmit={handleSubmit} className="flex flex-row pb-1">
 
                 {/* Input box and information button */}
                 <div className="flex flex-row">
@@ -62,7 +62,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                             onChange={handleChange}
                             type="text" maxLength={200}
                             required minLength="1"
-                            className="focus:outline-0 bg-glassLight rounded-md w-56 h-9 px-2 shadow-custom-input-inner"
+                            className="focus:outline-0 bg-glassLight rounded-md w-48 h-8 px-2 shadow-custom-input-inner"
                         />
                     </label>
                     <div className="self-center help-tip">
@@ -78,7 +78,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                     value="submit"
                     className="rounded-full shadow-custom-button transform active:scale-95 transition-all duration-100 ease-in-out active:shadow-custom-button-press mx-8"
                 >
-                    <div className="btn-gradient btn-gradient-transition self-center rounded-full text-black hover:text-white text-sm px-7 py-2.5">
+                    <div className="btn-gradient btn-gradient-transition self-center rounded-full text-black hover:text-white text-xs px-6 py-2.5">
                         Generate
                     </div>
                 </button>
