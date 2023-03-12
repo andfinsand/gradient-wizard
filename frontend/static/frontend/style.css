@@ -545,8 +545,8 @@ video {
 .w-3\/5 {
   width: 60%;
 }
-.w-40 {
-  width: 10rem;
+.w-32 {
+  width: 8rem;
 }
 .w-3 {
   width: 0.75rem;
@@ -608,14 +608,11 @@ video {
 .rounded-md {
   border-radius: 6px;
 }
-.border-2 {
-  border-width: 2px;
-}
-.border-glassLight {
-  border-color: rgba(255, 255, 255, 0.3);
-}
 .bg-glassLight {
   background-color: rgba(255, 255, 255, 0.3);
+}
+.bg-background-gradient {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 .p-5 {
   padding: 1.25rem;
@@ -624,13 +621,13 @@ video {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -651,10 +648,6 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -729,8 +722,8 @@ video {
   opacity: 0.9;
 }
 .shadow-custom-hex {
-  --tw-shadow: 0 17px 8px -12px rgb(0,0,0,0.2);
-  --tw-shadow-colored: 0 17px 8px -12px var(--tw-shadow-color);
+  --tw-shadow: 0 17px 8px -12px rgb(0,0,0,0.2), inset 0 -1px 2px rgb(0,0,0,0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.1);
+  --tw-shadow-colored: 0 17px 8px -12px var(--tw-shadow-color), inset 0 -1px 2px var(--tw-shadow-color), inset 0px 25px 10px -20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-input-inner {
@@ -744,7 +737,7 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-main {
-  --tw-shadow: 0 35px 12px -28px rgb(0,0,0,0.2), inset 0 -1px 3px rgb(0,0,0,0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.2);
+  --tw-shadow: 0 35px 12px -28px rgb(0,0,0,0.2), inset 0 -1px 3px rgb(0,0,0,0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.1);
   --tw-shadow-colored: 0 35px 12px -28px var(--tw-shadow-color), inset 0 -1px 3px var(--tw-shadow-color), inset 0px 25px 10px -20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -1144,17 +1137,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-glassLightest:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.hover\:text-glassDark:hover {
-  color: rgba(51, 51, 51, 0.75);
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(248 248 248 / var(--tw-text-opacity));
+.hover\:bg-glassMedium:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .hover\:transition:hover {
