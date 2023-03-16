@@ -42,13 +42,13 @@ const Navigation = ({handlePrevious, handleNext, currentDataIndex, history, isLo
             {/* Go back button */}
             <div className="relative mx-3">
                 <button onClick={handlePrevClick} className="transform hover:scale-110 ease-in-out duration-300">
-                    <div className="bg-glassLight px-4 py-8">
+                    <div className="bg-glassLight shadow-custom-navigation rounded-sm px-3 py-6">
                         <img src={Chevron_Left} alt="Chevron_Left" className="text-white"/>
                     </div>
                 </button>
                 {prevMessage && (
                 <div
-                    className={`flex justify-center items-center absolute bg-glassLight text-black text-sm italic rounded-md w-34 h-9 top-0 -translate-y-16 -translate-x-9 ${prevFadeIn ? "fade-in" : ""} ${prevFadeOut ? "fade-out" : ""}`}
+                    className={`flex justify-center items-center absolute bg-glassLight text-black text-xs italic rounded-md w-30 h-8 top-0 -translate-y-16 -translate-x-10 ${prevFadeIn ? "fade-in" : ""} ${prevFadeOut ? "fade-out" : ""}`}
                     onAnimationEnd={() => {
                         if (prevFadeOut) {
                             setPrevMessage("");
@@ -78,13 +78,13 @@ const Navigation = ({handlePrevious, handleNext, currentDataIndex, history, isLo
             {/* Go forward button */}
             <div className="relative mx-3">
                 <button onClick={handleNextClick} className="transform hover:scale-110 ease-in-out duration-300">
-                    <div className="bg-glassLight px-4 py-8">
+                    <div className="bg-glassLight shadow-custom-navigation rounded-sm px-3 py-6">
                         <img src={Chevron_Right} alt="Chevron_Left" className="text-white"/>
                     </div>
                 </button>
                 {nextMessage && (
                 <div
-                    className={`flex justify-center items-center absolute bg-glassLight text-black text-sm italic rounded-md w-38 h-9 top-0 right-0 -translate-y-16 translate-x-10 ${nextFadeIn ? "fade-in" : ""} ${nextFadeOut ? "fade-out" : ""}`}
+                    className={`flex justify-center items-center absolute bg-glassLight text-black text-xs italic rounded-md w-32 h-8 top-0 right-0 -translate-y-16 translate-x-10 ${nextFadeIn ? "fade-in" : ""} ${nextFadeOut ? "fade-out" : ""}`}
                     onAnimationEnd={() => {
                         if (nextFadeOut) {
                             setNextMessage("");
