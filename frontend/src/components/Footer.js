@@ -11,12 +11,12 @@ const Footer = ({currentData}) => {
             </div>
 
             {/* Gradient description */}
-            <div className="flex justify-center">
-                <div className="text-center w-3/5 text-md mt-5 mb-16 italic">{currentData.description || "The light and airy colors of the gradient represent a fresh start and a new beginning."}</div>
+            <div className="flex justify-center h-24">
+                <div className="text-center w-3/5 text-md mt-5 italic">{currentData.description || "The light and airy colors of the gradient represent a fresh start and a new beginning."}</div>
             </div>
 
             {/* Created by */}
-            <div className="text-center text-xxs tracking-wide">
+            <div className="text-center text-xxs tracking-wide mt-5">
                 Designed and developed by&nbsp;
                 <a
                     href="https://github.com/andfinsand/gradient-wizard"
@@ -30,7 +30,7 @@ const Footer = ({currentData}) => {
 
             {/* OpenAI logo */}
             <div className="flex justify-center mb-2">
-                <div className="text-xxs tracking-wide">
+                <div className="self-center text-xxs tracking-wide">
                     Powered by&nbsp;
                 </div>
                 <img src={OpenAI_Logo} alt="OpenAI logo" className="pt-0.5"/>

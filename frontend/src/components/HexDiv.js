@@ -31,7 +31,7 @@ const HexDiv = ({currentData}) => {
                 ) : (
                     <div className="flex items-center">
                         <div style={{ backgroundColor: currentData.hex1 || "#EDD0C5" }} className="self-center w-3 h-3 mr-3"></div>
-                        <span className="hex-code">{currentData.hex1 || "#EDD0C5"}</span>
+                        <span className="hex-code">{(currentData.hex1 || "#EDD0C5").toUpperCase()}</span>
                     </div>
                 )}
             </button>
@@ -45,7 +45,7 @@ const HexDiv = ({currentData}) => {
                 ) : (
                     <div className="flex items-center">
                         <div style={{ backgroundColor: currentData.hex2 || "#6774AC" }} className="self-center w-3 h-3 mr-3"></div>
-                        <span className="hex-code">{currentData.hex2 || "#6774AC"}</span>
+                        <span className="hex-code">{(currentData.hex2 || "#6774AC").toUpperCase()}</span>
                     </div>
                 )}
             </button>

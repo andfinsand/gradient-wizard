@@ -497,9 +497,6 @@ video {
 .mt-5 {
   margin-top: 1.25rem;
 }
-.mb-16 {
-  margin-bottom: 4rem;
-}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -524,6 +521,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-24 {
+  height: 6rem;
+}
 .h-3 {
   height: 0.75rem;
 }
@@ -536,8 +536,8 @@ video {
 .h-32 {
   height: 8rem;
 }
-.h-60 {
-  height: 60px;
+.h-14 {
+  height: 3.5rem;
 }
 .w-3\/5 {
   width: 60%;
@@ -557,8 +557,8 @@ video {
 .w-560 {
   width: 560px;
 }
-.w-60 {
-  width: 55px;
+.w-12 {
+  width: 3rem;
 }
 .w-30 {
   width: 120px;
@@ -602,6 +602,9 @@ video {
 .rounded-md {
   border-radius: 6px;
 }
+.rounded-sm {
+  border-radius: 2px;
+}
 .bg-glassLight {
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -639,6 +642,10 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -655,6 +662,9 @@ video {
 }
 .pt-0 {
   padding-top: 0px;
+}
+.pt-1 {
+  padding-top: 0.25rem;
 }
 .text-center {
   text-align: center;
@@ -680,11 +690,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+}
 .text-3xl {
   font-size: 1.875rem;
-}
-.text-4xl {
-  font-size: 2.25rem;
 }
 .font-semibold {
   font-weight: 600;
@@ -710,7 +720,7 @@ video {
   opacity: 0.9;
 }
 .shadow-custom-hex {
-  --tw-shadow: 0 17px 8px -12px rgb(0,0,0,0.2), inset 0 -1px 2px rgb(0,0,0,0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.1);
+  --tw-shadow: 0 17px 8px -12px rgb(0, 0, 0, 0.2), inset 0 -1px 2px rgb(0, 0, 0, 0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.1);
   --tw-shadow-colored: 0 17px 8px -12px var(--tw-shadow-color), inset 0 -1px 2px var(--tw-shadow-color), inset 0px 25px 10px -20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -725,13 +735,18 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-main {
-  --tw-shadow: 0 35px 12px -28px rgb(0,0,0,0.2), inset 0 -1px 3px rgb(0,0,0,0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.1);
+  --tw-shadow: 0 35px 12px -28px rgb(0, 0, 0, 0.2), inset 0 -1px 3px rgb(0, 0, 0, 0.2), inset 0px 25px 10px -20px rgba(255, 255, 255, 0.1);
   --tw-shadow-colored: 0 35px 12px -28px var(--tw-shadow-color), inset 0 -1px 3px var(--tw-shadow-color), inset 0px 25px 10px -20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-custom-nav {
-  --tw-shadow: 0 0px 7px rgb(0,0,0,0.2);
-  --tw-shadow-colored: 0 0px 7px var(--tw-shadow-color);
+.shadow-custom-navbar {
+  --tw-shadow: 0 2px 3px rgb(0, 0, 0, 0.15), inset 0 -1px 3px rgb(0, 0, 0, 0.15), inset 0 3px 5px rgb(255, 255, 255, 0.2);
+  --tw-shadow-colored: 0 2px 3px var(--tw-shadow-color), inset 0 -1px 3px var(--tw-shadow-color), inset 0 3px 5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-custom-navigation {
+  --tw-shadow: 0 11px 12px -5px rgba(0, 0, 0, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.2), inset 0 15px 15px -15px rgba(255, 255, 255, 0.15);
+  --tw-shadow-colored: 0 11px 12px -5px var(--tw-shadow-color), inset 0 -1px 2px var(--tw-shadow-color), inset 0 15px 15px -15px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .transition-all {
