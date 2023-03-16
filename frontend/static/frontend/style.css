@@ -654,6 +654,14 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -725,12 +733,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-input-inner {
-  --tw-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.6);
+  --tw-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.5);
   --tw-shadow-colored: inset 2px 4px 7px var(--tw-shadow-color), inset -3px -4px 7px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-custom-button {
-  --tw-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 3px rgba(255, 255, 255, 0.35);
+  --tw-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 3px rgba(255, 255, 255, 0.25);
   --tw-shadow-colored: 3px 3px 5px var(--tw-shadow-color), inset -2px -2px 3px var(--tw-shadow-color), inset 2px 2px 3px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -917,77 +925,6 @@ video {
 }
 
 /* Loading animation */
-
-/* .loader {
-    width: 10em;
-    height: 10em;
-    font-size: 10px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader .face {
-    position: absolute;
-    border-radius: 50%;
-    border-style: solid;
-    animation: animate 3s linear infinite;
-}
-
-.loader .face:nth-child(1) {
-    width: 100%;
-    height: 100%;
-    color: #BEF3FF;
-    border-color: currentColor transparent transparent currentColor;
-    border-width: 0.2em 0.2em 0em 0em;
-    --deg: -45deg;
-    animation-direction: normal;
-}
-
-.loader .face:nth-child(2) {
-    width: 70%;
-    height: 70%;
-    color: #BEF3FF;
-    border-color: currentColor currentColor transparent transparent;
-    border-width: 0.2em 0em 0em 0.2em;
-    --deg: -135deg;
-    animation-direction: reverse;
-}
-
-.loader .face .circle {
-    position: absolute;
-    width: 50%;
-    height: 0.1em;
-    top: 50%;
-    left: 50%;
-    background-color: transparent;
-    transform: rotate(var(--deg));
-    transform-origin: left;
-}
-
-.loader .face .circle::before {
-    position: absolute;
-    top: -0.5em;
-    right: -0.5em;
-    content: '';
-    width: .6em;
-    height: .6em;
-    background-color: currentColor;
-    border-radius: 50%;
-    box-shadow: 0 0 2em,
-                0 0 4em,
-                0 0 6em,
-                0 0 8em,
-                0 0 10em,
-                0 0 0 0.5em rgba(255, 255, 0, 0.1);
-}
-
-@keyframes animate {
-    to {
-        transform: rotate(1turn);
-    }
-} */
 
 /* -------------------------- circle dots loader ----------------------- */
 
