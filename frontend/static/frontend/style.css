@@ -605,6 +605,9 @@ video {
 .rounded-sm {
   border-radius: 2px;
 }
+.bg-glassMedium {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .bg-glassLight {
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -642,9 +645,13 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -653,14 +660,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-.py-0\.5 {
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-}
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
