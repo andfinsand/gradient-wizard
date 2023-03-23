@@ -5,12 +5,19 @@ import Three_Gradients from "../../static/svg/Three_Gradients_Icon.svg";
 
 const InputData = ({handleData, isLoading, setIsLoading}) => {
     const [word, setWord] = useState("");
+    const [gradientType, setGradientType] = useState("two-tone");
 
+    // Update state of input placeholder to user's input
     const handleChange = (event) => {
         setWord(event.target.value);
     }
 
-    // Button animation
+    // Update state between two or three gradients
+    const handleGradientTypeChange = (newGradientType) => {
+        setGradientType(newGradientType);
+    }
+
+    // 'Generate' button animation
     const animateButton = (event) => {
         event.preventDefault();
         const button = event.target;
@@ -26,6 +33,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
         event.preventDefault();
 
+        // Begin loader
         setIsLoading(true);
 
         // Fetch request to Django and use OpenAI API
@@ -36,15 +44,21 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                     'Content-Type': 'application/json',
                     'X-CSRFToken': csrf_token
                 },
-                body: JSON.stringify({word: word}),
+                body: JSON.stringify({
+                    gradientType: gradientType,
+                    word: word
+                }),
                 credentials: 'same-origin',
             });
 
             const fetchedData = await response.json();
             handleData(fetchedData);
+            console.log(fetchedData)
 
         } catch(error){
             console.error('Error:', error);
+
+        // End loader
         } finally {
             setIsLoading(false);
         }
@@ -86,13 +100,13 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
             {/* Choose between two or three gradients */}
             <div className="flex">
-                <button className="flex self-center h-5 mr-4">
+                <button onClick={() => handleGradientTypeChange('two-tone')} className="flex self-center h-5 mr-4">
                     <div className="self-center mr-1">
                         2
                     </div>
                     <img src={Two_Gradients} alt="Two_Gradients_Icon" className="self-center h-3 w-3"/>
                 </button>
-                <button className="flex self-center h-5">
+                <button onClick={() => handleGradientTypeChange('three-tone')} className="flex self-center h-5">
                     <div className="self-center mr-1">
                         3
                     </div>

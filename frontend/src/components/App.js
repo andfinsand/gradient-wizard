@@ -26,7 +26,7 @@ export default function App() {
         );
     };
 
-    // Indexing for generated gradients
+    // Indexing for generated gradients array
     useEffect(() => {
         if (history.length > 0) {
             setCurrentDataIndex(history.length - 1);

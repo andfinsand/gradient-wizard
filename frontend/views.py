@@ -19,6 +19,7 @@ class InputView(View):
 
 		if request.method == 'POST':
 			json_data = json.loads(request.body)
+			gradientType = json_data.get('gradientType')
 			input_val = json_data.get('word')
 
 			# DA VINCI
@@ -78,32 +79,37 @@ class InputView(View):
 
 			# GPT 3.5 TURBO
 			# Openai API
-			def run_openai_api(input_val):
-				response = openai.ChatCompletion.create(
-					model="gpt-3.5-turbo",
-					messages = [
-						{"role": "user", "content": f"Create a two-tone gradient using the word {input_val}. Provide each hex code. Provide a unique name for the gradient. Provide a description for why the colors were chosen and limit the description up to 200 characters. Your output should be formatted as a JSON object with the following keys and values: 'name' (string), 'hex1' (string), 'hex2' (string), and 'description' (string)."}
-					]
-					)
+			if gradientType == 'two-tone':
+				def run_openai_api(input_val):
+					response = openai.ChatCompletion.create(
+						model="gpt-3.5-turbo",
+						messages = [
+							{"role": "user", "content": f"Create a two-tone gradient using the word {input_val}. Provide each hex code. Provide a unique name for the gradient. Provide a description for why the colors were chosen and limit the description up to 200 characters. Your output should be formatted as a JSON object with the following keys and values: 'name' (string), 'hex1' (string), 'hex2' (string), and 'description' (string)."}
+						]
+						)
 
-				response_message = response.choices[0].message.content
-				output = json.loads(response_message)
-				return output
+					response_message = response.choices[0].message.content
+					output = json.loads(response_message)
+					return output
 
-			data = run_openai_api(input_val)
-			print(data)
+				data = run_openai_api(input_val)
+				print(data)
 
+			elif gradientType == 'three-tone':
+				def run_openai_api(input_val):
+					response = openai.ChatCompletion.create(
+						model="gpt-3.5-turbo",
+						messages = [
+							{"role": "user", "content": f"Create a three-tone gradient using the word {input_val}. Provide each hex code. Provide a unique name for the gradient. Provide a description for why the colors were chosen and limit the description up to 200 characters. Your output should be formatted as a JSON object with the following keys and values: 'name' (string), 'hex1' (string), 'hex2' (string), 'hex3' (string), and 'description' (string)."}
+						]
+						)
 
-            # TESTING
-			# gradient_dict = {
-            #     'hex1': '#00A2E8',
-			# 	'hex2': '#003580',
-			# 	'name': 'Ocean Depths',
-			# 	'description': 'The two colors represent the light blue of the surface of the ocean and the deep blue of the depths.'
-			# }
+					response_message = response.choices[0].message.content
+					output = json.loads(response_message)
+					return output
 
-			# data = gradient_dict
-			# print(gradient_dict)
+				data = run_openai_api(input_val)
+				print(data)
 
 			if input_val:
 				return JsonResponse(data, safe=False, status=201)
