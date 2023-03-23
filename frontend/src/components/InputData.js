@@ -53,7 +53,6 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
             const fetchedData = await response.json();
             handleData(fetchedData);
-            console.log(fetchedData)
 
         } catch(error){
             console.error('Error:', error);

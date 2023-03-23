@@ -17,22 +17,39 @@ export default function App() {
     const [gradient, setGradient] = useState(initialGradient);
     const currentData = currentDataIndex >= 0 ? history[currentDataIndex] : {};
 
-    // Get data from InputData component, add data to history array, update background gradient with data.
+    // This function updates the gradient history with the new data and sets the current data index
+    // It also sets the gradient according to the fetched data, including the third color if present
     const handleData = (fetchedData) => {
         setHistory([...history, fetchedData]);
         setCurrentDataIndex(currentDataIndex + 1);
-        setGradient(
-        `linear-gradient(to right, ${fetchedData.hex1}, ${fetchedData.hex2})`
-        );
+
+        let gradient;
+        if (fetchedData.hex3) {
+            gradient = `linear-gradient(to right, ${fetchedData.hex1}, ${fetchedData.hex2} 50%, ${fetchedData.hex3})`;
+        } else {
+            gradient = `linear-gradient(to right, ${fetchedData.hex1}, ${fetchedData.hex2})`;
+        }
+        setGradient(gradient);
     };
 
-    // Indexing for generated gradients array
+    // This effect hook updates the gradient whenever the history changes
+    // It sets the gradient to the last saved gradient in history, including the third color if present
     useEffect(() => {
         if (history.length > 0) {
             setCurrentDataIndex(history.length - 1);
-            setGradient(
-                `linear-gradient(to right, ${history[history.length - 1].hex1}, ${history[history.length - 1].hex2})`
-            );
+
+            // Check if hex3 is present in the current history object
+            const currentData = history[history.length - 1];
+
+            // Create the linear gradient string with the updated colors
+            let gradient;
+            if (currentData.hex3) {
+                gradient = `linear-gradient(to right, ${currentData.hex1}, ${currentData.hex2} 50%, ${currentData.hex3})`;
+            } else {
+                gradient = `linear-gradient(to right, ${currentData.hex1}, ${currentData.hex2})`;
+            }
+
+            setGradient(gradient);
         } else {
             setCurrentDataIndex(-1);
             setGradient(initialGradient);
@@ -42,23 +59,43 @@ export default function App() {
     // Go back
     const handlePrevious = () => {
         if (currentDataIndex === 0) {
-            setGradient(initialGradient);
-            setCurrentDataIndex(-1);
+        setGradient(initialGradient);
+        setCurrentDataIndex(-1);
         } else if (currentDataIndex > 0) {
-            setCurrentDataIndex(currentDataIndex - 1);
-            setGradient(
-                `linear-gradient(to right, ${history[currentDataIndex - 1].hex1}, ${history[currentDataIndex - 1].hex2})`
-            );
+        setCurrentDataIndex(currentDataIndex - 1);
+
+        // Check if hex3 is present in the previous history object
+        const prevData = history[currentDataIndex - 1];
+
+        // Create the linear gradient string with the updated colors
+        let gradient;
+        if (prevData.hex3) {
+            gradient = `linear-gradient(to right, ${prevData.hex1}, ${prevData.hex2} 50%, ${prevData.hex3})`;
+        } else {
+            gradient = `linear-gradient(to right, ${prevData.hex1}, ${prevData.hex2})`;
+        }
+
+        setGradient(gradient);
         }
     };
 
     // Go forward
     const handleNext = () => {
         if (currentDataIndex < history.length - 1) {
-            setCurrentDataIndex(currentDataIndex + 1);
-            setGradient(
-                `linear-gradient(to right, ${history[currentDataIndex + 1].hex1}, ${history[currentDataIndex + 1].hex2})`
-            );
+        setCurrentDataIndex(currentDataIndex + 1);
+
+        // Check if hex3 is present in the next history object
+        const nextData = history[currentDataIndex + 1];
+
+        // Create the linear gradient string with the updated colors
+        let gradient;
+        if (nextData.hex3) {
+            gradient = `linear-gradient(to right, ${nextData.hex1}, ${nextData.hex2} 50%, ${nextData.hex3})`;
+        } else {
+            gradient = `linear-gradient(to right, ${nextData.hex1}, ${nextData.hex2})`;
+        }
+
+        setGradient(gradient);
         }
     };
 
