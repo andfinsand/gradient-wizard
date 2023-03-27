@@ -56,6 +56,7 @@ module.exports = {
         'custom-input-inner': 'inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.5)',
         'custom-button': '3px 3px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 3px rgba(255, 255, 255, 0.25)',
         'custom-button-press': '0 2px 2px rgba(0, 0, 0, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.2), inset -2px -2px 8px rgba(255, 255, 255, 0.2)',
+        'custom-button-style-slide': '2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(0, 0, 0, 0.15), inset 2px 2px 5px rgba(255, 255, 255, 0.2)',
         'custom-navigation': '0 11px 12px -5px rgba(0, 0, 0, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.2), inset 0 15px 15px -15px rgba(255, 255, 255, 0.15)',
       },
       dropShadow: {
@@ -67,6 +68,7 @@ module.exports = {
         '38': '155px',
         '34': '135px',
         '30': '120px',
+        '18': '72px',
       },
       height: {
         '60': '60px',

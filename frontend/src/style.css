@@ -159,6 +159,21 @@
     100% { opacity:100%; }
 }
 
+/* Slide animation to choose between gradient style */
+
+
+.gradient-style-slider {
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-style-slider-border {
+    position: absolute;
+    transform: translateX(0);
+    transition: left 0.3s ease-in-out;
+    z-index: 0;
+}
+
 /* Loading animation */
 
 /* -------------------------- circle dots loader ----------------------- */

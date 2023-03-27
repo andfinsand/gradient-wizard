@@ -98,19 +98,39 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
             </form>
 
             {/* Choose between two or three gradients */}
-            <div className="flex">
-                <button onClick={() => handleGradientTypeChange('two-tone')} className="flex self-center h-5 mr-4">
+            <div className="flex w-20 justify-between relative">
+                <button
+                    onClick={() => handleGradientTypeChange('two-tone')} 
+                    className={`gradient-style-slider flex ml-1.5 ${gradientType === 'two-tone' ? '' : 'hover:text-glassMedium'}`}
+                >
                     <div className="self-center mr-1">
                         2
                     </div>
-                    <img src={Two_Gradients} alt="Two_Gradients_Icon" className="self-center h-3 w-3"/>
+                    <img
+                        src={Two_Gradients}
+                        alt="Two_Gradients_Icon"
+                        className="self-center h-3 w-3"
+                    />
                 </button>
-                <button onClick={() => handleGradientTypeChange('three-tone')} className="flex self-center h-5">
+                <button
+                    onClick={() => handleGradientTypeChange('three-tone')}
+                    className={`gradient-style-slider flex mr-2.5 ${gradientType === 'three-tone' ? '' : 'hover:text-glassMedium'}`}
+                >
                     <div className="self-center mr-1">
                         3
                     </div>
-                    <img src={Three_Gradients} alt="Three_Gradients_Icon" className="self-center h-3 w-3"/>
+                    <img
+                        src={Three_Gradients}
+                        alt="Three_Gradients_Icon"
+                        className="self-center h-3 w-3"
+                    />
                 </button>
+                <div
+                    className="gradient-style-slider-border shadow-custom-button-style-slide self-center bg-glassLight rounded-md h-6 w-9"
+                    style={{
+                        left: gradientType === 'two-tone' ? 0 : '50%',
+                    }}
+                ></div>
             </div>
         </div>
     );
