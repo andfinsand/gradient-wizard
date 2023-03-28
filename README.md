@@ -24,6 +24,7 @@ Gradient Wizard was built using the following technologies:
 ### Three-tone
 
 ![gradient_wizard_threetone](https://user-images.githubusercontent.com/88216761/228373387-b2487c07-eb90-4635-9ebe-c01b1c45fd43.PNG)
+![gradient_wizard_threetone](https://user-images.githubusercontent.com/88216761/228376266-3d74c4a7-82cd-4984-9d24-9210e160af2d.PNG)
 
 ### Logo
 
