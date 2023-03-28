@@ -14,3 +14,4 @@ Gradient Wizard was built using the following technologies:
   - Midjourney (logo design)
  
 ![gradient_wizard_landing](https://user-images.githubusercontent.com/88216761/228371073-2054a9d1-4c03-4fd2-ac6c-40bfd66321a0.PNG)
+![gradient_wizard_threetone](https://user-images.githubusercontent.com/88216761/228371893-48d5d89f-f805-45b5-bd05-184f0bcc80e0.PNG)
