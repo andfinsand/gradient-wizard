@@ -2,7 +2,7 @@
 
 Gradient Wizard is a web application that generates two-tone or three-tone gradients based on user input utilizing OpenAI's API and gpt-3.5-turbo model. The generated gradients are accompanied by hex codes, a unique name, and a description for why the colors were chosen. The user can then navigate back and forth between the generated gradients and copy the provided hex codes.
 
-### Technologies used
+## Technologies used
 
 Gradient Wizard was built using the following technologies:
 
@@ -13,5 +13,10 @@ Gradient Wizard was built using the following technologies:
   - gpt-3.5-turbo model
   - Midjourney (logo design)
  
+ ### Landing
+ 
 ![gradient_wizard_landing](https://user-images.githubusercontent.com/88216761/228371073-2054a9d1-4c03-4fd2-ac6c-40bfd66321a0.PNG)
-![gradient_wizard_threetone](https://user-images.githubusercontent.com/88216761/228371893-48d5d89f-f805-45b5-bd05-184f0bcc80e0.PNG)
+
+### Three-tone
+
+![gradient_wizard_threetone](https://user-images.githubusercontent.com/88216761/228372832-aea73506-1e1f-4551-aa14-b5008ead6df5.PNG)
