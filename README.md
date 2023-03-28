@@ -11,5 +11,6 @@ Gradient Wizard was built using the following technologies:
   - Django
   - OpenAI's API
   - gpt-3.5-turbo model
+  - Midjourney (logo design)
  
 ![gradient_wizard_landing](https://user-images.githubusercontent.com/88216761/228371073-2054a9d1-4c03-4fd2-ac6c-40bfd66321a0.PNG)
