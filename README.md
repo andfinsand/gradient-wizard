@@ -29,3 +29,4 @@ Gradient Wizard was built using the following technologies:
 
 ![gradient_wizard_logo](https://user-images.githubusercontent.com/88216761/228374175-5079f79d-5b0b-48b6-873e-e6b3ea0427f8.PNG)
 ![gradient_wizard_logo](https://user-images.githubusercontent.com/88216761/228375300-48f994c4-4ba0-4d31-ba00-d3bd615a2f33.PNG)
+![gradient_wizard_logo](https://user-images.githubusercontent.com/88216761/228375477-66309b7f-3584-434a-b97e-e904168c7145.PNG)
