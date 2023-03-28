@@ -4,8 +4,6 @@ Gradient Wizard is a web application that generates two-tone or three-tone gradi
 
 ## Technologies used
 
-Gradient Wizard was built using the following technologies:
-
   - React
   - TailwindCSS
   - Django
