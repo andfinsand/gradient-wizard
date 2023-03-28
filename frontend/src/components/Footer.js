@@ -19,9 +19,9 @@ const Footer = ({currentData}) => {
             <div className="text-center text-xxs tracking-wide mt-5">
                 Designed and developed by&nbsp;
                 <a
-                    href="https://github.com/andfinsand/gradient-wizard"
+                    href="https://www.andrewfinsand.dev/"
                     target="_blank"
-                    aria-label="open link to gradient wizard github"
+                    aria-label="open link to Andrew Finsand's portfolio"
                     className="hover:text-black"
                 >
                     Andrew Finsand
