@@ -16,6 +16,7 @@ Gradient Wizard was built using the following technologies:
  ### Landing
  
 ![gradient_wizard_landing](https://user-images.githubusercontent.com/88216761/228371073-2054a9d1-4c03-4fd2-ac6c-40bfd66321a0.PNG)
+![gradient_wizard_landing](https://user-images.githubusercontent.com/88216761/228373205-1550fdb7-d978-458b-bc41-48b7fb656b34.PNG)
 
 ### Three-tone
 
