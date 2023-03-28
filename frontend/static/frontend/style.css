@@ -521,6 +521,9 @@ video {
 .mr-2 {
   margin-right: 0.5rem;
 }
+.ml-9 {
+  margin-left: 2.25rem;
+}
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -568,9 +571,6 @@ video {
 }
 .w-9 {
   width: 2.25rem;
-}
-.w-18 {
-  width: 72px;
 }
 .w-560 {
   width: 560px;
