@@ -10,6 +10,7 @@ Gradient Wizard is a web application that generates two-tone or three-tone gradi
   - OpenAI's API
   - gpt-3.5-turbo model
   - Midjourney for logo design
+  - Docker
  
  ### Landing
  
