@@ -59,9 +59,6 @@ module.exports = {
         'custom-button-style-slide': '2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(0, 0, 0, 0.15), inset 2px 2px 5px rgba(255, 255, 255, 0.2)',
         'custom-navigation': '0 11px 12px -5px rgba(0, 0, 0, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.2), inset 0 15px 15px -15px rgba(255, 255, 255, 0.15)',
       },
-      dropShadow: {
-        // 'custom-title': '1px 1px 0px rgba(200, 200, 200, 0.3)',
-      },
       width: {
         '560': '560px',
         '60': '55px',
