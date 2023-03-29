@@ -72,8 +72,8 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
 
     return (
         <div className="w-full">
-            <div className="flex justify-center">
-                <form onSubmit={handleSubmit} className="flex flex-row pb-1">
+            <div className="flex justify-center pb-0.5">
+                <form onSubmit={handleSubmit} className="flex flex-row">
 
                     {/* Input box and information button */}
                     <div className="flex flex-row">
@@ -109,7 +109,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                 <div className="flex w-20 justify-between relative">
                     <button
                         onClick={() => handleGradientTypeChange('two-tone')}
-                        className={`gradient-style-slider flex ml-1.5 ${gradientType === 'two-tone' ? '' : 'hover:text-glassMedium'}`}
+                        className={`gradient-style-slider flex ${gradientType === 'two-tone' ? '' : 'hover:text-glassMedium'}`}
                     >
                         <div className="self-center mr-1">
                             2
@@ -122,7 +122,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                     </button>
                     <button
                         onClick={() => handleGradientTypeChange('three-tone')}
-                        className={`gradient-style-slider flex mr-2.5 ${gradientType === 'three-tone' ? '' : 'hover:text-glassMedium'}`}
+                        className={`gradient-style-slider flex mr-2 ${gradientType === 'three-tone' ? '' : 'hover:text-glassMedium'}`}
                     >
                         <div className="self-center mr-1">
                             3
@@ -136,7 +136,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
                     <div
                         className="gradient-style-slider-border shadow-custom-button-style-slide self-center bg-glassLight rounded-md h-6 w-9"
                         style={{
-                            left: gradientType === 'two-tone' ? 0 : '50%',
+                            left: gradientType === 'two-tone' ? -5 : '52%',
                         }}
                     ></div>
                 </div>
