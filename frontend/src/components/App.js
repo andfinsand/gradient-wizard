@@ -6,8 +6,6 @@ import MainDiv from "./MainDiv";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
-// const hex_data = {hex1: "#003049", hex2: "#00B2D6" };
-// const gradient = `linear-gradient(to right, ${hex_data.hex1}, ${hex_data.hex2})`;
 const initialGradient = 'linear-gradient(to right, #EDD0C5, #6774AC)';
 
 export default function App() {

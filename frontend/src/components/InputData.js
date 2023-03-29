@@ -60,7 +60,7 @@ const InputData = ({handleData, isLoading, setIsLoading}) => {
             const response = await Promise.race([fetchPromise, timeoutPromise]);
             const fetchedData = await response.json();
             handleData(fetchedData);
-            setShowErrorMessage(false); 
+            setShowErrorMessage(false);
         } catch (error) {
             console.error('Error:', error);
             setShowErrorMessage(true);

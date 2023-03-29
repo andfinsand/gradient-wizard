@@ -6,13 +6,13 @@ const Footer = ({currentData}) => {
         <div className="flex flex-col text-white">
 
             {/* Gradient name */}
-            <div className="text-center text-lg text-white">
+            <div className="text-center text-lg">
                 {currentData.name || "Fresh Start"}
             </div>
 
             {/* Gradient description */}
             <div className="flex justify-center h-24">
-                <div className="text-center w-3/5 text-md mt-5 italic">{currentData.description || "The light and airy colors of the gradient represent a fresh start and a new beginning."}</div>
+                <div className="text-center text-md italic w-3/5 mt-5">{currentData.description || "The light and airy colors of the gradient represent a fresh start and a new beginning."}</div>
             </div>
 
             {/* Created by */}
