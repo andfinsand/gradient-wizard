@@ -14,16 +14,15 @@ Gradient Wizard is a web application that utilizes the OpenAI API and gpt-3.5-tu
  
  ### Landing
  
-![gradient_wizard_landing](https://user-images.githubusercontent.com/88216761/228373205-1550fdb7-d978-458b-bc41-48b7fb656b34.PNG)
+![gradient_wizard_landing](https://user-images.githubusercontent.com/88216761/228610358-64b613af-8444-48b9-9bea-cd5eed4a24db.PNG)
 
 ### Two-tone
 
-![gradient_wizard_twotone](https://user-images.githubusercontent.com/88216761/228374904-c9ca1ec6-7af4-4785-9802-d090efedaa74.PNG)
+![gradient_wizard_twotone](https://user-images.githubusercontent.com/88216761/228610435-ee08e136-6353-4784-b9ee-2ea8b49d5677.PNG)
 
 ### Three-tone
 
-![gradient_wizard_threetone](https://user-images.githubusercontent.com/88216761/228376428-d8f834e8-696d-4a0d-9d48-c39e087a775f.PNG)
-
+![gradient_wizard_threetone](https://user-images.githubusercontent.com/88216761/228610446-0c15d2a1-a3e5-45da-a363-89577e0890b4.PNG)
 
 ### Logo
 
