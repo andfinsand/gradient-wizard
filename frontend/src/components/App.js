@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import Navbar from "./Navbar";
 import MainContentContainer from "./MainContentContainer";
-import Navigation from "./Navigation";
+import NavigationButtons from "./NavigationButtons";
 import Footer from "./Footer";
 
 const initialGradient = 'linear-gradient(to right, #EDD0C5, #6774AC)';
@@ -102,7 +102,7 @@ export default function App() {
             <Navbar />
             <div className="flex flex-col justify-between font-Lato text-black h-full px-10 py-8 pb-1">
                 <MainContentContainer handleData={handleData} currentData={currentData} isLoading={isLoading} setIsLoading={setIsLoading} />
-                <Navigation
+                <NavigationButtons
                     handlePrevious={handlePrevious}
                     handleNext={handleNext}
                     currentDataIndex={currentDataIndex}
