@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 
 import Navbar from "./Navbar";
-import MainDiv from "./MainDiv";
+import MainContentContainer from "./MainContentContainer";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
@@ -101,7 +101,7 @@ export default function App() {
         <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
             <Navbar />
             <div className="flex flex-col justify-between font-Lato text-black h-full px-10 py-8 pb-1">
-                <MainDiv handleData={handleData} currentData={currentData} isLoading={isLoading} setIsLoading={setIsLoading} />
+                <MainContentContainer handleData={handleData} currentData={currentData} isLoading={isLoading} setIsLoading={setIsLoading} />
                 <Navigation
                     handlePrevious={handlePrevious}
                     handleNext={handleNext}

@@ -614,6 +614,9 @@ video {
 .rounded-sm {
   border-radius: 2px;
 }
+.rounded-lg {
+  border-radius: 15px;
+}
 .bg-glassLight {
   background-color: rgba(255, 255, 255, 0.3);
 }
