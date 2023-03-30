@@ -9,10 +9,10 @@ import Footer from "./Footer";
 const initialGradient = 'linear-gradient(to right, #EDD0C5, #6774AC)';
 
 export default function App() {
+    const [gradient, setGradient] = useState(initialGradient);
     const [isLoading, setIsLoading] = useState(false);
     const [history, setHistory] = useState([]);
     const [currentDataIndex, setCurrentDataIndex] = useState(-1);
-    const [gradient, setGradient] = useState(initialGradient);
     const currentData = currentDataIndex >= 0 ? history[currentDataIndex] : {};
 
     // This function updates the gradient history with the new data and sets the current data index
@@ -47,6 +47,7 @@ export default function App() {
                 gradient = `linear-gradient(to right, ${currentData.hex1}, ${currentData.hex2})`;
             }
 
+            // Update setGradient state
             setGradient(gradient);
         } else {
             setCurrentDataIndex(-1);
@@ -54,7 +55,7 @@ export default function App() {
         }
     }, [history]);
 
-    // Go back
+    // Go back function
     const handlePrevious = () => {
         if (currentDataIndex === 0) {
         setGradient(initialGradient);
@@ -73,11 +74,12 @@ export default function App() {
             gradient = `linear-gradient(to right, ${prevData.hex1}, ${prevData.hex2})`;
         }
 
+        // Update setGradient state
         setGradient(gradient);
         }
     };
 
-    // Go forward
+    // Go forward function
     const handleNext = () => {
         if (currentDataIndex < history.length - 1) {
         setCurrentDataIndex(currentDataIndex + 1);
@@ -93,6 +95,7 @@ export default function App() {
             gradient = `linear-gradient(to right, ${nextData.hex1}, ${nextData.hex2})`;
         }
 
+        // Update setGradient state
         setGradient(gradient);
         }
     };
