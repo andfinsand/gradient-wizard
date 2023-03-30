@@ -3,14 +3,14 @@ import Information_Icon from "../../static/svg/Information_Icon.svg";
 import Two_Gradients from "../../static/svg/Two_Gradients_Icon.svg";
 import Three_Gradients from "../../static/svg/Three_Gradients_Icon.svg";
 
-const InputData = ({handleData, setIsLoading}) => {
-    const [word, setWord] = useState("");
+const InputData = ({handleDataReceived, setIsLoading}) => {
+    const [userInput, setuserInput] = useState("");
     const [gradientType, setGradientType] = useState("two-tone");
     const [showErrorMessage, setShowErrorMessage] = useState(false);
 
-    // Update state of input placeholder to user's input
+    // Update state of input field to user's input value
     const handleChange = (event) => {
-        setWord(event.target.value);
+        setuserInput(event.target.value);
     }
 
     // Update state between two or three gradients
@@ -30,20 +30,23 @@ const InputData = ({handleData, setIsLoading}) => {
 
     // Submit form
     const handleSubmit = async (event) => {
+
+        // Get CSRF token from cookies
         const csrf_token = document.cookie.match(/csrftoken=([^;]+)/)[1];
 
+        // Prevent default form submission behavior
         event.preventDefault();
 
-        // Begin loader
+        // Show loading spinner
         setIsLoading(true);
 
         // Add timeout and race fetch request with it
-        const timeoutPromise = new Promise((resolve, reject) => {
-            setTimeout(() => reject(new Error('Request timed out')), 25000); // 25 seconds
+        const timeoutPromise = new Promise((reject) => {
+            setTimeout(() => reject(new Error('Request timed out')), 25000); // Timeout error after 25 seconds
         });
 
         // Fetch request to Django and use OpenAI API
-        const fetchPromise = await fetch('input-word', {
+        const fetchPromise = await fetch('input-value', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,39 +54,47 @@ const InputData = ({handleData, setIsLoading}) => {
             },
             body: JSON.stringify({
                 gradientType: gradientType,
-                word: word
+                userInput: userInput
             }),
             credentials: 'same-origin',
         });
 
         try {
+            // Wait for the first promise to resolve or reject
             const response = await Promise.race([fetchPromise, timeoutPromise]);
+
+            // Parse fetched data from response
             const fetchedData = await response.json();
-            handleData(fetchedData);
+
+            // Handle received data
+            handleDataReceived(fetchedData);
+
+            // Hide error message (if any)
             setShowErrorMessage(false);
         } catch (error) {
+            // Log error to console and show error message
             console.error('Error:', error);
             setShowErrorMessage(true);
         } finally {
+            // Hide loading spinner
             setIsLoading(false);
         }
     };
-
 
     return (
         <div className="w-full">
             <div className="flex justify-center pb-0.5">
                 <form onSubmit={handleSubmit} className="flex flex-row">
 
-                    {/* Input box and information button */}
+                    {/* Input field and information button */}
                     <div className="flex flex-row">
                         <label className="self-center rounded-md">
                             <input
-                                value={word}
+                                value={userInput}
                                 onChange={handleChange}
                                 type="text" maxLength={200}
                                 required minLength="1"
-                                className="focus:outline-0 bg-glassLight rounded-md w-48 h-8 px-2 shadow-custom-input-inner"
+                                className="focus:outline-0 bg-glassLight rounded-md shadow-custom-input-inner w-48 h-8 px-2"
                             />
                         </label>
                         <div className="self-center help-tip">
@@ -105,7 +116,7 @@ const InputData = ({handleData, setIsLoading}) => {
                     </button>
                 </form>
 
-                {/* Choose between two or three gradients */}
+                {/* Choose between two-tone or three-tone gradients */}
                 <div className="flex w-20 justify-between relative">
                     <button
                         onClick={() => handleGradientTypeChange('two-tone')}

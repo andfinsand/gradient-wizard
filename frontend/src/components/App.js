@@ -17,7 +17,7 @@ export default function App() {
 
     // This function updates the gradient history with the new data and sets the current data index
     // It also sets the gradient according to the fetched data, including the third color if present
-    const handleData = (fetchedData) => {
+    const handleDataReceived = (fetchedData) => {
         setHistory([...history, fetchedData]);
         setCurrentDataIndex(currentDataIndex + 1);
 
@@ -104,7 +104,7 @@ export default function App() {
         <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
             <Navbar />
             <div className="flex flex-col justify-between font-Lato text-black h-full px-10 py-8 pb-1">
-                <MainContentContainer handleData={handleData} currentData={currentData} setIsLoading={setIsLoading} />
+                <MainContentContainer handleDataReceived={handleDataReceived} currentData={currentData} setIsLoading={setIsLoading} />
                 <NavigationButtons
                     handlePrevious={handlePrevious}
                     handleNext={handleNext}

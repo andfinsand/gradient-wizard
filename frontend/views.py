@@ -20,7 +20,7 @@ class InputView(View):
 		if request.method == 'POST':
 			json_data = json.loads(request.body)
 			gradientType = json_data.get('gradientType')
-			input_val = json_data.get('word')
+			input_val = json_data.get('userInput')
 
 			# DA VINCI
 
