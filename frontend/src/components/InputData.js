@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Information_Icon from "../../static/svg/Information_Icon.svg";
 import Two_Gradients from "../../static/svg/Two_Gradients_Icon.svg";
 import Three_Gradients from "../../static/svg/Three_Gradients_Icon.svg";
 
-const InputData = ({handleData, isLoading, setIsLoading}) => {
+const InputData = ({handleData, setIsLoading}) => {
     const [word, setWord] = useState("");
     const [gradientType, setGradientType] = useState("two-tone");
     const [showErrorMessage, setShowErrorMessage] = useState(false);

@@ -2,7 +2,7 @@ import React from "react";
 import InputData from "./InputData";
 import HexCodeContainers from "./HexCodeContainers";
 
-const MainContentContainer = ({handleData, currentData, isLoading, setIsLoading}) => {
+const MainContentContainer = ({handleData, currentData, setIsLoading}) => {
     return (
         <div className="flex flex-col justify-center">
             <div className="flex flex-col justify-between self-center bg-background-gradient shadow-custom-main rounded-md w-560 h-32 p-5">
@@ -12,7 +12,6 @@ const MainContentContainer = ({handleData, currentData, isLoading, setIsLoading}
                 <InputData handleData={(fetchedData) => {
                     handleData(fetchedData);
                     }}
-                    isLoading={isLoading}
                     setIsLoading={setIsLoading}
                 />
             </div>

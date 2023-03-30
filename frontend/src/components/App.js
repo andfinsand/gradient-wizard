@@ -104,7 +104,7 @@ export default function App() {
         <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
             <Navbar />
             <div className="flex flex-col justify-between font-Lato text-black h-full px-10 py-8 pb-1">
-                <MainContentContainer handleData={handleData} currentData={currentData} isLoading={isLoading} setIsLoading={setIsLoading} />
+                <MainContentContainer handleData={handleData} currentData={currentData} setIsLoading={setIsLoading} />
                 <NavigationButtons
                     handlePrevious={handlePrevious}
                     handleNext={handleNext}
