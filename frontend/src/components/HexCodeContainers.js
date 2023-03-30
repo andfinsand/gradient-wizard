@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-const HexDiv = ({currentData}) => {
+const HexCodeContainers = ({currentData}) => {
     const [copiedMessage, setCopiedMessage] = useState({});
 
+    // Function to copy hex code to clipboard when clicked.
     const copyToClipboard = (e) => {
         const code = e.currentTarget.querySelector(".hex-code").textContent;
         navigator.clipboard.writeText(code);
@@ -20,10 +21,10 @@ const HexDiv = ({currentData}) => {
     }
 
     return (
-        <div className="flex justify-center relative text-black mt-2">
+        <div className="flex justify-center text-black mt-2">
 
             {/* hex 1 */}
-            <button onClick={copyToClipboard} data-index={0} className="flex justify-center self-center bg-background-gradient hover:bg-glassMedium rounded-full shadow-custom-hex text-xs font-semibold w-32 m-5 py-4 hover:transition ease-in-out duration-300">
+            <button onClick={copyToClipboard} data-index={0} className="flex justify-center self-center bg-background-gradient hover:bg-glassMedium rounded-full shadow-custom-hex text-xs font-semibold hover:transition ease-in-out duration-300 w-32 m-5 py-4">
                 {copiedMessage[0] ? (
                     <div className="flex items-center">
                         <span className="flex text-black text-xs italic tracking-wider">{copiedMessage[0]}</span>
@@ -37,7 +38,7 @@ const HexDiv = ({currentData}) => {
             </button>
 
             {/* hex 2 */}
-            <button onClick={copyToClipboard} data-index={1} className="flex justify-center self-center bg-background-gradient hover:bg-glassMedium rounded-full shadow-custom-hex text-xs font-semibold w-32 m-5 py-4 hover:transition ease-in-out duration-300">
+            <button onClick={copyToClipboard} data-index={1} className="flex justify-center self-center bg-background-gradient hover:bg-glassMedium rounded-full shadow-custom-hex text-xs font-semibold hover:transition ease-in-out duration-300 w-32 m-5 py-4">
                 {copiedMessage[1] ? (
                     <div className="flex items-center">
                         <span className="flex text-black text-xs italic tracking-wider">{copiedMessage[1]}</span>
@@ -64,10 +65,9 @@ const HexDiv = ({currentData}) => {
                         </div>
                     )}
                 </button>
-)}
-
+            )}
         </div>
     );
 }
 
-export default HexDiv;
+export default HexCodeContainers;

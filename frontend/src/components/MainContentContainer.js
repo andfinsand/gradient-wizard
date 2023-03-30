@@ -1,6 +1,6 @@
 import React from "react";
 import InputData from "./InputData";
-import HexDiv from "./HexDiv";
+import HexCodeContainers from "./HexCodeContainers";
 
 const MainContentContainer = ({handleData, currentData, isLoading, setIsLoading}) => {
     return (
@@ -16,7 +16,7 @@ const MainContentContainer = ({handleData, currentData, isLoading, setIsLoading}
                     setIsLoading={setIsLoading}
                 />
             </div>
-            <HexDiv currentData={currentData} />
+            <HexCodeContainers currentData={currentData} />
         </div>
     );
 }
