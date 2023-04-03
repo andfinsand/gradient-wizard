@@ -13,6 +13,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+    },
     colors: {
       white: '#F8F8F8',
       black: '#323232',
@@ -23,6 +28,7 @@ module.exports = {
       glassLightest: 'rgba(255, 255, 255, 0.1)',
     },
     fontSize: {
+      '3xs': '8px',
       xxs: '10px',
       xs: '0.75rem',
       sm: '0.875rem',
@@ -60,7 +66,9 @@ module.exports = {
         'custom-navigation': '0 11px 12px -5px rgba(0, 0, 0, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.2), inset 0 15px 15px -15px rgba(255, 255, 255, 0.15)',
       },
       width: {
-        '560': '560px',
+        '575': '575px',
+        '420': '420px',
+        '300': '265px',
         '60': '55px',
         '38': '155px',
         '34': '135px',
@@ -69,6 +77,7 @@ module.exports = {
       },
       height: {
         '60': '60px',
+        '26': '104px',
       },
     },
   },

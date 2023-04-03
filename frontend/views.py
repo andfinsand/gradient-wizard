@@ -84,7 +84,7 @@ class InputView(View):
 					response = openai.ChatCompletion.create(
 						model="gpt-3.5-turbo",
 						messages = [
-							{"role": "user", "content": f"Create a two-tone gradient using the word {input_val}. Provide each hex code. Provide a unique name for the gradient. Provide a description for why the colors were chosen and limit the description up to 200 characters. Your output should be formatted as a JSON object with the following keys and values: 'name' (string), 'hex1' (string), 'hex2' (string), and 'description' (string)."}
+							{"role": "user", "content": f"Create a two-tone gradient using the word {input_val}. Provide each hex code. Provide a unique name for the gradient. Provide a description for why the colors were chosen and limit the description up to 180 characters. Your output should be formatted as a JSON object with the following keys and values: 'name' (string), 'hex1' (string), 'hex2' (string), and 'description' (string)."}
 						]
 						)
 
@@ -109,7 +109,7 @@ class InputView(View):
 					response = openai.ChatCompletion.create(
 						model="gpt-3.5-turbo",
 						messages = [
-							{"role": "user", "content": f"Create a three-tone gradient using the word {input_val}. Provide each hex code. Provide a unique name for the gradient. Provide a description for why the colors were chosen and limit the description up to 200 characters. Your output should be formatted as a JSON object with the following keys and values: 'name' (string), 'hex1' (string), 'hex2' (string), 'hex3' (string), and 'description' (string)."}
+							{"role": "user", "content": f"Create a three-tone gradient using the word {input_val}. Provide each hex code. Provide a unique name for the gradient. Provide a description for why the colors were chosen and limit the description up to 180 characters. Your output should be formatted as a JSON object with the following keys and values: 'name' (string), 'hex1' (string), 'hex2' (string), 'hex3' (string), and 'description' (string)."}
 						]
 						)
 

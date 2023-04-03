@@ -83,23 +83,23 @@ const InputData = ({handleDataReceived, setIsLoading}) => {
 
     return (
         <div className="w-full">
-            <div className="flex justify-center pb-0.5">
-                <form onSubmit={handleSubmit} className="flex flex-row">
+            <div className="flex justify-center pb-0.5 flex-col xs:flex-row">
+                <form onSubmit={handleSubmit} className="flex flex-col xs:flex-row">
 
                     {/* Input field and information button */}
-                    <div className="flex flex-row">
+                    <div className="flex flex-row self-center my-3.5 xs:my-0">
                         <label className="self-center rounded-md">
                             <input
                                 value={userInput}
                                 onChange={handleChange}
                                 type="text" maxLength={200}
                                 required minLength="1"
-                                className="focus:outline-0 bg-glassLight rounded-md shadow-custom-input-inner w-48 h-8 px-2"
+                                className="focus:outline-0 bg-glassLight rounded-md shadow-custom-input-inner text-sm w-44 h-7 px-2 xs:w-40 sm:text-base sm:w-48 sm:h-8"
                             />
                         </label>
-                        <div className="self-center help-tip">
+                        <div className="self-center help-tip hidden xs:flex">
                             <p>Generate gradients from your input, complete with corresponding hex codes, a unique name, and explanation of color choices provided by OpenAI.</p>
-                            <img src={Information_Icon} alt="Information_Icon"/>
+                            <img src={Information_Icon} alt="Information_Icon" className="w-3 sm:w-4"/>
                         </div>
                     </div>
 
@@ -108,16 +108,16 @@ const InputData = ({handleDataReceived, setIsLoading}) => {
                         onMouseDown={animateButton}
                         type="submit"
                         value="submit"
-                        className="rounded-full shadow-custom-button transform active:scale-95 transition-all duration-100 ease-in-out active:shadow-custom-button-press hover:bg-glassMedium mx-8"
+                        className="rounded-full shadow-custom-button transform active:scale-95 transition-all duration-100 ease-in-out active:shadow-custom-button-press hover:bg-glassMedium mx-16 mb-3.5 xs:mx-5 xs:mb-0 sm:mx-8"
                     >
-                        <div className="btn-gradient btn-gradient-transition self-center rounded-full text-black text-xs px-6 py-2.5">
+                        <div className="btn-gradient btn-gradient-transition self-center rounded-full text-black text-xxs px-4 py-2 sm:text-xs sm:px-6 sm:py-2.5">
                             Generate
                         </div>
                     </button>
                 </form>
 
                 {/* Choose between two-tone or three-tone gradients */}
-                <div className="flex w-20 justify-between relative">
+                <div className="flex w-20 justify-between self-center relative">
                     <button
                         onClick={() => handleGradientTypeChange('two-tone')}
                         className={`gradient-style-slider flex ${gradientType === 'two-tone' ? '' : 'hover:text-glassMedium'}`}
@@ -155,7 +155,7 @@ const InputData = ({handleDataReceived, setIsLoading}) => {
 
             {/* Error message */}
             {showErrorMessage && (
-                <div className="absolute text-xxs ml-9">Unable to fetch data. Please try again.</div>
+                <div className="absolute text-3xs mt-0.5 ml-12 xs:ml-2 xs:mt-0 sm:text-xxs sm:ml-11">Unable to fetch data. Please try again.</div>
             )}
         </div>
     );

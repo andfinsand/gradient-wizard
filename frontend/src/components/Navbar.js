@@ -4,7 +4,7 @@ import Github_Icon from "../../static/svg/Github_Icon.svg";
 
 const Navbar = () => {
     return (
-        <div className="flex justify-between bg-glassLight shadow-custom-navbar text-black h-14 px-2">
+        <div className="flex justify-center bg-glassLight shadow-custom-navbar text-black h-14 px-2 xs:justify-between">
 
             {/* Logo and title */}
             <div className="flex">
@@ -17,7 +17,7 @@ const Navbar = () => {
             </div>
 
             {/* Github icon */}
-            <div className="self-center mr-1">
+            <div className="self-center hidden mr-1 xs:flex">
                 <a
                     href="https://github.com/andfinsand/gradient-wizard"
                     target="_blank"
@@ -25,7 +25,6 @@ const Navbar = () => {
                     <img src={Github_Icon} alt="Github_Icon"/>
                 </a>
             </div>
-
         </div>
     );
 }

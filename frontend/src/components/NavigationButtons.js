@@ -51,7 +51,7 @@ const NavigationButtons = ({handlePrevious, handleNext, currentDataIndex, histor
 
                 {/* Trigger message if beginning of list is reached */}
                 {prevMessage && (
-                    <div className={`flex justify-center items-center absolute bg-glassLight text-black text-xs italic rounded-md w-30 h-8 top-0 -translate-y-16 -translate-x-10 ${prevFadeIn ? "fade-in" : ""} ${prevFadeOut ? "fade-out" : ""}`}
+                    <div className={`flex justify-center items-center absolute bg-glassLight text-black text-xs italic rounded-md w-30 h-8 top-0 -translate-y-16 -translate-x-5 xs:-translate-x-10 ${prevFadeIn ? "fade-in" : ""} ${prevFadeOut ? "fade-out" : ""}`}
                         onAnimationEnd={() => {
                             // Resets message during fadeout so message can re-appear if button is clicked again.
                             if (prevFadeOut) {
@@ -80,7 +80,7 @@ const NavigationButtons = ({handlePrevious, handleNext, currentDataIndex, histor
 
                 {/* Trigger message if end of list is reached */}
                 {nextMessage && (
-                    <div className={`flex justify-center items-center absolute bg-glassLight text-black text-xs italic rounded-md w-32 h-8 top-0 right-0 -translate-y-16 translate-x-10 ${nextFadeIn ? "fade-in" : ""} ${nextFadeOut ? "fade-out" : ""}`}
+                    <div className={`flex justify-center items-center absolute bg-glassLight text-black text-xs italic rounded-md w-32 h-8 top-0 right-0 -translate-y-16 translate-x-5 xs:translate-x-10 ${nextFadeIn ? "fade-in" : ""} ${nextFadeOut ? "fade-out" : ""}`}
                         onAnimationEnd={() => {
                             // Resets message during fadeout so message can re-appear if button is clicked again.
                             if (nextFadeOut) {
