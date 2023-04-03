@@ -539,6 +539,12 @@ video {
 .mb-5 {
   margin-bottom: 1.25rem;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.ml-2\.5 {
+  margin-left: 0.625rem;
+}
 .flex {
   display: flex;
 }
@@ -916,7 +922,7 @@ video {
     animation: fadeIn 0.3s ease;
 }
 
-/* The tooltip */
+/* The tooltip for information icon */
 .help-tip p {
 	display: none;
 	font-family: sans-serif;
@@ -967,7 +973,6 @@ video {
 }
 
 /* Slide animation to choose between gradient style */
-
 
 .gradient-style-slider {
     position: relative;
@@ -1035,7 +1040,7 @@ video {
 100% { transform: rotate(360deg) }
 }
 
-/* Previous and next button error alert */
+/* Error alert for prevoius and forward navigation buttons if list exceeds range */
 
 @keyframes fade-in {
     from {
@@ -1128,6 +1133,10 @@ video {
 
   .xs\:mt-0 {
     margin-top: 0px;
+  }
+
+  .xs\:ml-0 {
+    margin-left: 0px;
   }
 
   .xs\:flex {

@@ -103,7 +103,7 @@
     animation: fadeIn 0.3s ease;
 }
 
-/* The tooltip */
+/* The tooltip for information icon */
 .help-tip p {
 	display: none;
 	font-family: sans-serif;
@@ -159,7 +159,6 @@
 }
 
 /* Slide animation to choose between gradient style */
-
 
 .gradient-style-slider {
     position: relative;
@@ -227,7 +226,7 @@
 100% { transform: rotate(360deg) }
 }
 
-/* Previous and next button error alert */
+/* Error alert for prevoius and forward navigation buttons if list exceeds range */
 
 @keyframes fade-in {
     from {

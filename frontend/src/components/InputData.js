@@ -117,7 +117,7 @@ const InputData = ({handleDataReceived, setIsLoading}) => {
                 </form>
 
                 {/* Choose between two-tone or three-tone gradients */}
-                <div className="flex w-20 justify-between self-center relative">
+                <div className="flex w-20 justify-between self-center relative ml-2 xs:ml-0">
                     <button
                         onClick={() => handleGradientTypeChange('two-tone')}
                         className={`gradient-style-slider flex ${gradientType === 'two-tone' ? '' : 'hover:text-glassMedium'}`}
