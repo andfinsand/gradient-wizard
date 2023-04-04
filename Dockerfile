@@ -1,5 +1,5 @@
 # Pull official python base image
-FROM python:3.11-alpine3.16
+FROM python:3.11-slim-buster
 
 # Set work directory
 WORKDIR /backend
@@ -13,13 +13,15 @@ ENV PYTHONUNBUFFERED 1
 # Establish port for django run command to work properly
 ENV PORT 8000
 
-# Copy requirements.text (for pip install) to the work directory
-COPY ./requirements.txt .
-
-RUN apk add nginx
+# Copy requirements.txt (for pip install) to the work directory
+COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends nginx \
+    && pip install --no-cache-dir -r requirements.txt \
+    && apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy django project into container
 COPY . .
