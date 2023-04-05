@@ -27,4 +27,4 @@ RUN apt-get update \
 COPY . .
 
 #CMD python manage.py runserver 0.0.0.0:$PORT
-CMD python manage.py makemigrations; python manage.py migrate; python manage.py collectstatic --no-input; gunicorn --workers=2 -b 0.0.0.0:$PORT gradient_wizard.backend.wsgi
+CMD python manage.py makemigrations; python manage.py migrate; python manage.py collectstatic --no-input; gunicorn --workers=2 -b 0.0.0.0:$PORT backend.wsgi
