@@ -40,6 +40,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
     'https://gradient-wizard.up.railway.app',
     'https://gradientwizard.io',
+    'https://api.openai.com',
 ]
 
 CORS_ALLOWED_WHITELIST = [
