@@ -31,17 +31,19 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_ALLOWED_ORIGINS = [
-    '*'
+    'gradient-wizard.up.railway.app',
+    'gradientwizard.io',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
-    'https://*'
+    '*',
 ]
 
 CORS_ALLOWED_WHITELIST = [
-    '*'
+    os.environ.get('RAILWAY_STATIC_URL',
+    'https://gradient-wizard.up.railway.app')
 ]
 
 # Application definition
