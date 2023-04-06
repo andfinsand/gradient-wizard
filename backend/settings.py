@@ -30,6 +30,12 @@ ALLOWED_HOSTS = [
     '*'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://gradient-wizard.up.railway.app',
+    'https://gradientwizard.io',
+    'https://api.openai.com',
+]
+
 CSRF_ALLOWED_ORIGINS = [
     'gradient-wizard.up.railway.app',
     'gradientwizard.io',
