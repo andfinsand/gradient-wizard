@@ -32,6 +32,11 @@ ALLOWED_HOSTS = [
     'gradientwizard.io',
 ]
 
+CSRF_ALLOWED_ORIGINS = [
+    'gradient-wizard.up.railway.app',
+    'gradientwizard.io',
+]
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
