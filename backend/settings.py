@@ -44,6 +44,11 @@ CORS_ALLOWED_ORIGINS = [
     'https://gradientwizard.io',
 ]
 
+CORS_ALLOWED_WHITELIST = [
+    os.environ.get('RAILWAY_STATIC_URL',
+    'https://gradient-wizard.up.railway.app')
+]
+
 # Application definition
 
 INSTALLED_APPS = [
