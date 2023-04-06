@@ -36,19 +36,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://api.openai.com',
 ]
 
-CSRF_ALLOWED_ORIGINS = [
-    'gradient-wizard.up.railway.app',
-    'gradientwizard.io',
-]
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ALLOWED_ORIGINS = [
-    'https://gradient-wizard.up.railway.app',
-    'https://gradientwizard.io',
-    'https://api.openai.com',
-]
-
 # Application definition
 
 INSTALLED_APPS = [
