@@ -1,5 +1,5 @@
 # Pull official python base image
-FROM python:3.11-slim-buster
+FROM python:3.9.5-slim-buster
 
 # Set work directory
 WORKDIR /backend
@@ -26,5 +26,8 @@ RUN apt-get update \
 # Copy django project into container
 COPY . .
 
-#CMD python manage.py runserver 0.0.0.0:$PORT
+# Expose the port
+EXPOSE $PORT
+
+# Start the server
 CMD python manage.py makemigrations; python manage.py migrate; python manage.py collectstatic --no-input; gunicorn --workers=2 -b 0.0.0.0:$PORT backend.wsgi
