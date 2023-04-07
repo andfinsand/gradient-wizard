@@ -37,7 +37,7 @@ class InputView(View):
 					return output
 
 				data = run_openai_api(input_val)
-				print(data)
+				print(f'{input_val} {data}')
 
 			elif gradient_type == 'three-tone':
 				def run_openai_api(input_val):
