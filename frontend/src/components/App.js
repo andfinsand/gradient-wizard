@@ -101,9 +101,9 @@ export default function App() {
     };
 
     return (
-        <div style={{ background: gradient, minWidth: "100vw", minHeight: "100vh" }} className="flex flex-col">
+        <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
             <Navbar />
-            <div className="flex flex-col justify-between font-Lato text-black h-full px-5 pb-1 py-7 xs:px-10 ">
+            <div className="flex flex-col justify-between font-Lato text-black h-full overflow-auto px-5 pb-1 py-7 xs:px-10">
                 <MainContentContainer handleDataReceived={handleDataReceived} currentData={currentData} setIsLoading={setIsLoading} />
                 <NavigationButtons
                     handlePrevious={handlePrevious}

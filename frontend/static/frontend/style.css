@@ -647,6 +647,9 @@ video {
 .self-center {
   align-self: center;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .rounded-full {
   border-radius: 9999px;
 }
