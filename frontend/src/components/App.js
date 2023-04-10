@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
+import { Helmet } from 'react-helmet';
 
 import Navbar from "./Navbar";
 import MainContentContainer from "./MainContentContainer";
@@ -102,6 +103,12 @@ export default function App() {
 
     return (
         <div style={{ background: gradient, width: "100vw", height: "100vh" }} className="flex flex-col">
+            <Helmet>
+                <title>Gradient Wizard - Create beautiful gradients with AI | React | TailwindCSS | Django | OpenAI API | gpt-3.5-turbo model | Docker</title>
+                <meta name="description" content="Gradient Wizard is a web application that utilizes the OpenAI API and gpt-3.5-turbo model to create two or three-tone gradients based on user input. The generated gradients are accompanied by hex codes, a unique name, and a description for why the colors were chosen." />
+                <meta name="author" content="Andrew Finsand" />
+                <meta name="keywords" content="React, Tailwind CSS, Django, Python, OpenAI API, gpt-3.5-turbo model, Midjourney logo design, Docker, AI, gradient generator, color picker, gradient tool, AI-powered gradient generator" />
+            </Helmet>
             <Navbar />
             <div className="flex flex-col justify-between font-Lato text-black h-full overflow-auto px-5 pb-1 py-7 xs:px-10">
                 <MainContentContainer handleDataReceived={handleDataReceived} currentData={currentData} setIsLoading={setIsLoading} />
