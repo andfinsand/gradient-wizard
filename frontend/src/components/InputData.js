@@ -94,7 +94,7 @@ const InputData = ({handleDataReceived, setIsLoading}) => {
                                 onChange={handleChange}
                                 type="text" maxLength={200}
                                 required minLength="1"
-                                className="focus:outline-0 bg-glassLight rounded-md shadow-custom-input-inner text-sm w-44 h-7 px-2 xs:w-40 sm:text-base sm:w-48 sm:h-8"
+                                className="custom-input-inner focus:outline-0 bg-glassLight rounded-md text-sm w-44 h-7 px-2 xs:w-40 sm:text-base sm:w-48 sm:h-8"
                             />
                         </label>
                         <div className="self-center help-tip hidden xs:flex">

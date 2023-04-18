@@ -647,6 +647,9 @@ video {
 .self-center {
   align-self: center;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .rounded-full {
   border-radius: 9999px;
 }
@@ -774,11 +777,6 @@ video {
   --tw-shadow-colored: 0 17px 8px -12px var(--tw-shadow-color), inset 0 -1px 2px var(--tw-shadow-color), inset 0px 25px 10px -20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-custom-input-inner {
-  --tw-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.5);
-  --tw-shadow-colored: inset 2px 4px 7px var(--tw-shadow-color), inset -3px -4px 7px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .shadow-custom-button {
   --tw-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 3px rgba(255, 255, 255, 0.25);
   --tw-shadow-colored: 3px 3px 5px var(--tw-shadow-color), inset -2px -2px 3px var(--tw-shadow-color), inset 2px 2px 3px var(--tw-shadow-color);
@@ -817,6 +815,14 @@ video {
 }
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Input field inner shadow */
+
+.custom-input-inner {
+    box-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.5);
+    -webkit-appearance: none;
 }
 
 /* Button gradient and bubble animation */

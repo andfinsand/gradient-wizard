@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Input field inner shadow */
+
+.custom-input-inner {
+    box-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: inset 2px 4px 7px rgba(0, 0, 0, 0.22), inset -3px -4px 7px rgba(255, 255, 255, 0.5);
+    -webkit-appearance: none;
+}
+
 /* Button gradient and bubble animation */
 
 .btn-gradient {
